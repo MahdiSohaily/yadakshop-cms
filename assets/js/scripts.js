@@ -1,4 +1,4 @@
-const defaultLocation = [35.722, 51.328];
+const defaultLocation = [34.516,69.177];
 const defaultZoom = 17;
 var map = L.map("map").setView(defaultLocation, defaultZoom);
 
@@ -13,23 +13,6 @@ document
   .getElementById("map")
   .style.setProperty("height", window.innerHeight + "px");
  
-// set view in map
-// map.setView([29.592, 52.573], defaultZoom);
-
-// show and pin markers
-// L.marker(defaultLocation).addTo(map).bindPopup("7Learn Office 1").openPopup();
-// L.marker([35.712, 51.338]).addTo(map).bindPopup("7Learn Office 2");
-// map.on('popupopen', function() {
-//     alert('PopUp Opened!');
-// });
-
-// get view Bound information
-// var northLine = map.getBounds().getNorth(); // khat shomali
-// var westLine = map.getBounds().getWest(); // khat Gharbi
-// var southLine = map.getBounds().getSouth(); // khat Jonoobi
-// var eastLine = map.getBounds().getEast(); // khat Sharghi
-
-// Use Map Events
 map.on("zoomend", function () {
   // alert(map.getBounds().getCenter());
   // 1 : get bound lines
