@@ -3,15 +3,20 @@
 namespace App\Controllers;
 
 use App\Models\User;
+use App\Core\request;
 
 class LoginController
 {
-    function login()
+    function index()
     {
-        global $request;
+        view('auth/login', ['page_title' => 'ورود به سیستم']);
+    }
 
-        print_r($request->input('path'));
-        $user = new User(1);
-        print_r($user->name);
+    function validate(Request $request)
+    {
+        view('auth/login', [
+            'page_title' => 'ورود به سیستم',
+            'error' => '* نام کاربری یا رمز عبور وارد شده اشتباه می باشد .'
+        ]);
     }
 }

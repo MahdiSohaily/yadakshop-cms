@@ -1,6 +1,7 @@
 <?php
 
 use App\Core\Request;
+use App\models\User;
 
 define('BASE_PATH', __DIR__ . '/../');
 
@@ -14,3 +15,4 @@ $dotenv->load();
 
 
 $request = new Request();
+$user = new User();

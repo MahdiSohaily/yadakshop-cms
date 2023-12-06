@@ -7,11 +7,9 @@ Route::get('/', function () {
 }, [BlockFirefox::class]);
 
 
-Route::get('/login', function () {
-    view('auth/login', ['page_title' => 'ورود به سیستم']);
-});
+Route::get('/login', ['LoginController', 'index']);
 
-Route::post('/login/check', ['LoginController' , 'login']);
+Route::post('/login/check', ['LoginController', 'validate']);
 
 
 Route::add(['get'], '/home', function () {

@@ -140,7 +140,8 @@ class Router
         if (!method_exists($controller_object, $method)) {
             throw new \Exception("method $method does not exist");
         }
+        global $request;
 
-        $controller_object->$method();
+        $controller_object->$method($request);
     }
 }
