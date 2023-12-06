@@ -1,17 +1,16 @@
 <?php
-include "constants.php";
-include BASE_PATH . "bootstrap/config.php";
-include BASE_PATH . "libs/helpers.php";
 
-try {
-    $pdo = new PDO("mysql:dbname=$database_config->db;host={$database_config->host}", $database_config->user, $database_config->pass);
-    $pdo->exec("set names utf8;");
-} catch (PDOException $e) {
-    diePage('Connection failed: ' . $e->getMessage());
-}
+use App\Core\Request;
 
-// echo "Connection to Database is OK!";
+define('BASE_PATH', __DIR__ . '/../');
+
+require_once(BASE_PATH . '/vendor/autoload.php');
+require_once(BASE_PATH . '/helpers/helpers.php');
+require_once(BASE_PATH . '/routes/web.php');
 
 
-include BASE_PATH . "libs/lib-locations.php";
+$dotenv = Dotenv\Dotenv::createImmutable(BASE_PATH);
+$dotenv->load();
 
+
+$request = new Request();

@@ -1,2 +1,2 @@
-# php-map
-This repository contains a basic PHP project which allow the user to work with map. add some locations and search for location.
+# PHP-micro-framework
+I have created this repository to create a custom PHP MVC micro framework in order to practice PHP advance topics
