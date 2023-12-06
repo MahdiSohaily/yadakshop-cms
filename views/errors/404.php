@@ -3,20 +3,16 @@ require_once BASE_PATH . 'views/errors/templates/header.php';
 ?>
 
 <body>
-    <div class="h-screen w-screen bg-gray-50 flex items-center">
-        <div class="container flex flex-col md:flex-row items-center justify-between px-5 text-gray-700">
-            <div class="w-full lg:w-1/2 mx-8">
-                <div class="text-7xl text-indigo-500 font-dark font-extrabold mb-8"> ۴۰۴</div>
-                <p class="text-2xl md:text-3xl font-light leading-normal mb-8">
-                    متاسفانه صفحه مورد نظر شما پیدا نشد.
-                </p>
-
-                <a href="<?= site_url() ?>" class="px-5 inline py-3 text-sm font-medium leading-5 shadow-2xl text-white transition-all duration-400 border border-transparent rounded-lg focus:outline-none bg-indigo-600 active:bg-red-600 hover:bg-red-700">برگشت به صفحه اصلی</a>
-            </div>
-            <div class="w-full lg:flex lg:justify-end lg:w-1/2 mx-5 my-12">
-                <img src="<?= asset_url('img/404.svg') ?>" class="" alt="Page not found">
-            </div>
-
+    <div class="flex flex-col items-center justify-center w-screen h-screen gap-12 py-8 ">
+        <img class="h-1/2 aspect-video" src="<?= asset_url('img/404.svg') ?>" alt="">
+        <div class="flex flex-col items-center gap-4">
+            <h1 class="text-5xl font-bold text-center text-indigo-600">
+                ۴۰۴
+            </h1>
+            <p class="text-xl text-center ">
+                متاسفانه صفحه درخواستی شما پیدا نشد.
+            </p>
+            <a href="<?= site_url() ?>" class="px-5 inline py-3 text-sm font-medium leading-5 shadow-2xl text-white transition-all duration-400 border border-transparent rounded-lg focus:outline-none bg-indigo-600 active:bg-red-600 hover:bg-red-700">برگشت به صفحه اصلی</a>
         </div>
     </div>
 </body>

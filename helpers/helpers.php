@@ -20,3 +20,10 @@ function view($path = '', $data = [])
     $fullPath = BASE_PATH . "views/$filePath.php";
     include_once $fullPath;
 }
+
+function sanitizeString($str)
+{
+    $str = trim($str);
+    $str = stripslashes($str);
+    return htmlspecialchars($str, ENT_QUOTES);
+}

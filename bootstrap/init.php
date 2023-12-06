@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 use App\Core\Request;
 use App\models\User;

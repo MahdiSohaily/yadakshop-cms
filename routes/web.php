@@ -4,7 +4,7 @@ use App\Core\Routing\Route;
 use App\Middlewares\BlockFirefox;
 
 Route::get('/', function () {
-}, [BlockFirefox::class]);
+});
 
 
 Route::get('/login', ['LoginController', 'index']);

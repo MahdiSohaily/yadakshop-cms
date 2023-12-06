@@ -47,7 +47,7 @@ class mysqlBaseModel extends BaseModel
      * finding a unique record using primary key
      * sets the object properties using column names and values
      */
-    public function find(int $id): object | null
+    public function find( $id): object | null
     {
         $record = $this->connection->get($this->table, '*', [$this->primaryKey => $id]) ?? [];
         foreach ($record as $key => $value) {

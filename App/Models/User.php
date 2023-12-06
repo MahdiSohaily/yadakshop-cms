@@ -7,4 +7,5 @@ use App\Models\Contracts\mysqlBaseModel;
 class User extends mysqlBaseModel
 {
     protected $table = 'users';
+    public $primaryKey = 'username';
 }
