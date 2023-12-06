@@ -4,6 +4,8 @@ use App\Core\Routing\Route;
 use App\Middlewares\BlockFirefox;
 
 Route::get('/', function () {
+    global $user;
+    print_r($user);
 });
 
 

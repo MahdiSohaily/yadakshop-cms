@@ -16,4 +16,3 @@ $dotenv->load();
 
 
 $request = new Request();
-$user = new User();

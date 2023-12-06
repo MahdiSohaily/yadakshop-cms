@@ -14,6 +14,7 @@ class LoginController
 
     public function validate(Request $request)
     {
+        global $user;
         $username = sanitizeString($request->input('username'));
         $password = trim(($request->input('password')));
 
@@ -24,16 +25,15 @@ class LoginController
             ]);
         }
 
-        $user = new User($username);
+        $fetched_user = new User($username);
 
-        if ($user && password_verify($password, $user->password)) {
-            $_SESSION['user_id'] = $user->id;
-            $_SESSION['username'] = $user->username;
+        if ($fetched_user && password_verify($password, $fetched_user->password)) {
+            $_SESSION['user_id'] = $fetched_user->id;
+            $_SESSION['username'] = $fetched_user->username;
+            $user = $fetched_user;
+            $user->isLogin = true;
             
-            return view('auth/login', [
-                'page_title' => 'ورود به سیستم',
-                'error' => 'ورود موفقیت‌آمیز بود!'
-            ]);
+            header('Location: /');
         } else {
             return view('auth/login', [
                 'page_title' => 'ورود به سیستم',
