@@ -21,7 +21,7 @@ require_once BASE_PATH . 'views/templates/heroHeader.php';
                 <form class="space-y-4 md:space-y-6" action="<?= site_url('login/check') ?>" method="post">
                     <div>
                         <label for="username" class="block mb-2 text-sm font-medium text-gray-900"> نام کاربری</label>
-                        <input onkeyup="convertToEnglish(this)" type="username" name="username" id="username" min="3" max="20" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 placeholder-gray-400  focus:ring-blue-500 focus:border-blue-500" placeholder="user" required="">
+                        <input onkeyup="convertToEnglish(this)" type="text" name="username" id="username" minlength="3" maxlength="20" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 placeholder-gray-400  focus:ring-blue-500 focus:border-blue-500" placeholder="user" required="">
                     </div>
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-gray-900">رمز عبور</label>
