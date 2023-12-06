@@ -5,7 +5,7 @@ use App\Middlewares\BlockFirefox;
 
 Route::get('/', function () {
     view('auth/login', [
-        'page_title' => 'ورود به سیستمك'
+        'page_title' =>'ورود به سیستم'
     ]);
 }, [BlockFirefox::class]);
 
