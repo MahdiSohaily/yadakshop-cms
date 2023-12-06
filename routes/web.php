@@ -1,31 +1,11 @@
 <?php
 
 use App\Core\Routing\Route;
-use App\Middlewares\BlockFirefox;
+use App\Middlewares\Authorize;
 
-Route::get('/', function () {
-    global $user;
-    print_r($user);
-});
+// Landing page route
+Route::get('/', ['DashboardController', 'index'], [Authorize::class]);
 
-
-Route::get('/login', ['LoginController', 'index']);
-
+// Authentication routes
+Route::get('/login', ['LoginController', 'index'], [Authorize::class]);
 Route::post('/login/check', ['LoginController', 'validate']);
-
-
-Route::add(['get'], '/home', function () {
-    view('auth/login');
-});
-
-Route::get('/post/{slug}', ['ProductsController', 'post']);
-
-Route::post('/create', null);
-
-Route::get('/about', function () {
-    echo 'welcome to the About Page';
-});
-
-Route::get('/products', 'ProductsController@show', [BlockFirefox::class]);
-
-Route::get('/post/{slug}/comment/{id}', ['ProductsController', 'post']);

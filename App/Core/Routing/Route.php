@@ -9,9 +9,6 @@ class Route
     private static $routes = [];
     public static function add($method, $uri, $action = null, $middleware = [])
     {
-        if ($uri !== 'login') {
-            array_push($middleware, Authorize::class);
-        }
         $method = is_array($method) ? $method : [$method];
         array_push(self::$routes, ['method' => $method, 'uri' => $uri, 'action' => $action, 'middleware' => $middleware]);
     }
