@@ -17,7 +17,7 @@ class Authorize implements MiddlewareInterface
         }
 
         // Check if the user is logged in
-        if (isset($_SESSION['user_idw'])) {
+        if (isset($_SESSION['user_id'])) {
             $user = new User($_SESSION['username']);
         } else {
             // Check if the current route is the login route
