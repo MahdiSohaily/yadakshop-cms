@@ -10,6 +10,7 @@ class Request
     private $uri;
     private $agent;
     private $ip;
+    protected $attributes = [];
 
     function __construct()
     {
@@ -62,5 +63,14 @@ class Request
     public function getUri(): string
     {
         return $this->uri;
+    }
+
+    function input($key)
+    {
+        if (empty($key)) {
+            return null;
+        }
+
+        return $this->params[$key];
     }
 }

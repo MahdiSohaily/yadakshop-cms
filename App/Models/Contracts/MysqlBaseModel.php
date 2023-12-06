@@ -16,8 +16,8 @@ class mysqlBaseModel extends BaseModel
             $this->connection = new Medoo([
                 'type' => 'mysql',
                 'host' => $_ENV['DB_HOST'],
-                'database' => $_ENV['DB_NAME'],
-                'username' => $_ENV['DB_USER'],
+                'database' => $_ENV['DB_DATABASE'],
+                'username' => $_ENV['DB_USERNAME'],
                 'password' => $_ENV['DB_PASSWORD'],
                 'error' => \PDO::ERRMODE_EXCEPTION,
             ]);
