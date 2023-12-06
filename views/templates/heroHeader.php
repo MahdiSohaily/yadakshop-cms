@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="<?= asset_url('img/favicon.ico') ?>" type="image/x-icon">
     <title><?= $page_title ?></title>
     <link rel="stylesheet" href="<?= asset_url('css/output.css') ?>">
-    </link>
+    <script src="<?= asset_url('js/helpers.js') ?>"></script>
 </head>
 
 <body>

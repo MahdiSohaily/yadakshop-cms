@@ -4,10 +4,14 @@ use App\Core\Routing\Route;
 use App\Middlewares\BlockFirefox;
 
 Route::get('/', function () {
-    view('auth/login', [
-        'page_title' =>'ورود به سیستم'
-    ]);
 }, [BlockFirefox::class]);
+
+
+Route::get('/login', function () {
+    view('auth/login', ['page_title' => 'ورود به سیستم']);
+});
+
+Route::post('/login/check', ['LoginController' , 'login']);
 
 
 Route::add(['get'], '/home', function () {
