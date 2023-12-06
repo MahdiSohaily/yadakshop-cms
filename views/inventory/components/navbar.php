@@ -1,7 +1,7 @@
 <header class="fixed top-0 left-0 right-0 z-10 flex align-center justify-between px-5 overflow-hidden h-16 text-white bg-indigo-600 shadow-lg">
-    <ul class="flex gap-3">
-        <li class="flex items-center ">
-            <a class="flex items-center hover:text-gray-200 ml-5" href="#">
+    <ul class="flex">
+        <li class="flex items-center">
+            <a class="flex items-center hover:text-gray-200 p-3 ml-5" href="#">
                 <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_429_11066)">
                         <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -15,7 +15,7 @@
             </a>
         </li>
         <li class="flex items-center">
-            <a class="flex items-center hover:text-gray-200" href="">
+            <a class="flex items-center hover:text-gray-200 bg-gray-700 rounded p-3 mx-1" href="">
                 <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 32 32" xml:space="preserve">
                     <style type="text/css">
                         .stone_een {
@@ -29,8 +29,8 @@
                 <span class="text-sm px-2"> ورود کالا</span>
             </a>
         </li>
-        <li class="flex items-center"><a href="">
-                <a class="flex items-center hover:text-gray-200" href="">
+        <li class="flex items-center">
+                <a class="flex items-center hover:text-gray-200 rounded p-3 mx-1" href="">
                     <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 32 32" xml:space="preserve">
                         <style type="text/css">
                             .stone_een {
@@ -56,68 +56,67 @@
 	S14.224,27,14.5,27z" />
                     </svg>
                     <span class="text-sm px-2"> خروج کالا</span>
-                </a>
             </a></li>
-        <li class="flex items-center"><a href="">
-                <a class="flex items-center hover:text-gray-200" href="">
-                    <svg fill="#fff" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 296.999 296.999" xml:space="preserve">
+        <li class="flex items-center">
+            <a class="flex items-center hover:text-gray-200 rounded p-3 mx-1" href="">
+                <svg fill="#fff" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 296.999 296.999" xml:space="preserve">
+                    <g>
                         <g>
                             <g>
-                                <g>
-                                    <path d="M45.432,35.049c-0.008,0-0.017,0-0.025,0c-2.809,0-5.451,1.095-7.446,3.085c-2.017,2.012-3.128,4.691-3.128,7.543
+                                <path d="M45.432,35.049c-0.008,0-0.017,0-0.025,0c-2.809,0-5.451,1.095-7.446,3.085c-2.017,2.012-3.128,4.691-3.128,7.543
 				v159.365c0,5.844,4.773,10.61,10.641,10.625c24.738,0.059,66.184,5.215,94.776,35.136V84.023c0-1.981-0.506-3.842-1.461-5.382
 				C115.322,40.849,70.226,35.107,45.432,35.049z" />
-                                    <path d="M262.167,205.042V45.676c0-2.852-1.111-5.531-3.128-7.543c-1.995-1.99-4.639-3.085-7.445-3.085c-0.009,0-0.018,0-0.026,0
+                                <path d="M262.167,205.042V45.676c0-2.852-1.111-5.531-3.128-7.543c-1.995-1.99-4.639-3.085-7.445-3.085c-0.009,0-0.018,0-0.026,0
 				c-24.793,0.059-69.889,5.801-93.357,43.593c-0.955,1.54-1.46,3.401-1.46,5.382v166.779
 				c28.592-29.921,70.038-35.077,94.776-35.136C257.394,215.651,262.167,210.885,262.167,205.042z" />
-                                    <path d="M286.373,71.801h-7.706v133.241c0,14.921-12.157,27.088-27.101,27.125c-20.983,0.05-55.581,4.153-80.084,27.344
+                                <path d="M286.373,71.801h-7.706v133.241c0,14.921-12.157,27.088-27.101,27.125c-20.983,0.05-55.581,4.153-80.084,27.344
 				c42.378-10.376,87.052-3.631,112.512,2.171c3.179,0.724,6.464-0.024,9.011-2.054c2.538-2.025,3.994-5.052,3.994-8.301V82.427
 				C297,76.568,292.232,71.801,286.373,71.801z" />
-                                    <path d="M18.332,205.042V71.801h-7.706C4.768,71.801,0,76.568,0,82.427v168.897c0,3.25,1.456,6.276,3.994,8.301
+                                <path d="M18.332,205.042V71.801h-7.706C4.768,71.801,0,76.568,0,82.427v168.897c0,3.25,1.456,6.276,3.994,8.301
 				c2.545,2.029,5.827,2.78,9.011,2.054c25.46-5.803,70.135-12.547,112.511-2.171c-24.502-23.19-59.1-27.292-80.083-27.342
 				C30.49,232.13,18.332,219.963,18.332,205.042z" />
-                                </g>
                             </g>
                         </g>
-                    </svg>
-                    <span class="text-sm px-2"> گزارش ورود </span>
-                </a>
-            </a></li>
-        <li class="flex items-center"><a href="">
-                <a class="flex items-center hover:text-gray-200" href="">
-                    <svg fill="#fff" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 296.999 296.999" xml:space="preserve">
+                    </g>
+                </svg>
+                <span class="text-sm px-2"> گزارش ورود </span>
+            </a>
+        </li>
+        <li class="flex items-center">
+            <a class="flex items-center hover:text-gray-200 rounded p-3 mx-1" href="">
+                <svg fill="#fff" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 296.999 296.999" xml:space="preserve">
+                    <g>
                         <g>
                             <g>
-                                <g>
-                                    <path d="M45.432,35.049c-0.008,0-0.017,0-0.025,0c-2.809,0-5.451,1.095-7.446,3.085c-2.017,2.012-3.128,4.691-3.128,7.543
+                                <path d="M45.432,35.049c-0.008,0-0.017,0-0.025,0c-2.809,0-5.451,1.095-7.446,3.085c-2.017,2.012-3.128,4.691-3.128,7.543
 				v159.365c0,5.844,4.773,10.61,10.641,10.625c24.738,0.059,66.184,5.215,94.776,35.136V84.023c0-1.981-0.506-3.842-1.461-5.382
 				C115.322,40.849,70.226,35.107,45.432,35.049z" />
-                                    <path d="M262.167,205.042V45.676c0-2.852-1.111-5.531-3.128-7.543c-1.995-1.99-4.639-3.085-7.445-3.085c-0.009,0-0.018,0-0.026,0
+                                <path d="M262.167,205.042V45.676c0-2.852-1.111-5.531-3.128-7.543c-1.995-1.99-4.639-3.085-7.445-3.085c-0.009,0-0.018,0-0.026,0
 				c-24.793,0.059-69.889,5.801-93.357,43.593c-0.955,1.54-1.46,3.401-1.46,5.382v166.779
 				c28.592-29.921,70.038-35.077,94.776-35.136C257.394,215.651,262.167,210.885,262.167,205.042z" />
-                                    <path d="M286.373,71.801h-7.706v133.241c0,14.921-12.157,27.088-27.101,27.125c-20.983,0.05-55.581,4.153-80.084,27.344
+                                <path d="M286.373,71.801h-7.706v133.241c0,14.921-12.157,27.088-27.101,27.125c-20.983,0.05-55.581,4.153-80.084,27.344
 				c42.378-10.376,87.052-3.631,112.512,2.171c3.179,0.724,6.464-0.024,9.011-2.054c2.538-2.025,3.994-5.052,3.994-8.301V82.427
 				C297,76.568,292.232,71.801,286.373,71.801z" />
-                                    <path d="M18.332,205.042V71.801h-7.706C4.768,71.801,0,76.568,0,82.427v168.897c0,3.25,1.456,6.276,3.994,8.301
+                                <path d="M18.332,205.042V71.801h-7.706C4.768,71.801,0,76.568,0,82.427v168.897c0,3.25,1.456,6.276,3.994,8.301
 				c2.545,2.029,5.827,2.78,9.011,2.054c25.46-5.803,70.135-12.547,112.511-2.171c-24.502-23.19-59.1-27.292-80.083-27.342
 				C30.49,232.13,18.332,219.963,18.332,205.042z" />
-                                </g>
                             </g>
                         </g>
-                    </svg>
-                    <span class="text-sm px-2"> گزارش خروج </span>
-                </a>
-            </a></li>
-        <li class="flex items-center"><a href="">
-                <a class="flex items-center hover:text-gray-200" href="">
+                    </g>
+                </svg>
+                <span class="text-sm px-2"> گزارش خروج </span>
+            </a>
+        </li>
+        <li class="flex items-center">
+                <a class="flex items-center hover:text-gray-200 rounded p-3 mx-1" href="">
                     <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="store" class="icon glyph">
                         <path d="M20,14.81V20a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V14.81A4.25,4.25,0,0,0,5.25,15a4.3,4.3,0,0,0,2.25-.64,4.28,4.28,0,0,0,4.5,0,4.28,4.28,0,0,0,4.5,0,4.3,4.3,0,0,0,2.25.64A4.25,4.25,0,0,0,20,14.81ZM21.76,9,20.17,3.45A2,2,0,0,0,18.25,2H5.75A2,2,0,0,0,3.83,3.45L2.24,9A6.48,6.48,0,0,0,2,10.75a3.25,3.25,0,0,0,5.5,2.34,3.24,3.24,0,0,0,4.5,0,3.24,3.24,0,0,0,4.5,0A3.25,3.25,0,0,0,22,10.75,6.48,6.48,0,0,0,21.76,9Z" style="fill:#fff"></path>
                     </svg>
                     <span class="text-sm px-2"> موجودی کالا</span>
                 </a>
-            </a></li>
-        <li class="flex items-center"><a href="">
-                <a class="flex items-center hover:text-gray-200" href="">
+            </li>
+        <li class="flex items-center">
+                <a class="flex items-center hover:text-gray-200 rounded p-3 mx-1" href="">
                     <svg height="20px" width="20px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
                         <style type="text/css">
                             .st0 {
@@ -140,9 +139,9 @@
                     </svg>
                     <span class="text-sm px-2"> مرکز تماس</span>
                 </a>
-            </a></li>
+            </li>
     </ul>
-    <ul class="flex gap-3">
+    <ul class="flex gap-3 sm:hidden">
         <li class="flex items-center">
             <a href="#">
                 <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -159,6 +158,8 @@
                 </svg>
             </a>
         </li>
-        <li class="flex items-center">3</li>
+        <li class="flex items-center">
+            <img class="w-10 rounded-full border-2 border-white" title="username" src="<?= asset_url('img/default.jpg') ?>" alt="">
+        </li>
     </ul>
 </header>
