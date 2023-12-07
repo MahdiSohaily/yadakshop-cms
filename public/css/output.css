@@ -572,10 +572,6 @@ video {
   top: 0px;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -612,10 +608,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mr-5 {
-  margin-right: 1.25rem;
 }
 
 .block {
@@ -766,10 +758,6 @@ video {
 
 .border-t {
   border-top-width: 1px;
-}
-
-.border-l {
-  border-left-width: 1px;
 }
 
 .border-gray-300 {
@@ -1059,6 +1047,18 @@ video {
 
 * {
   font-family: sahel, Arial, Helvetica, sans-serif;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  right: -500px;
+}
+
+.active {
+  right: 0 !important;
 }
 
 .hover\:bg-gray-700:hover {
