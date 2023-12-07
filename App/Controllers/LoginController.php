@@ -32,7 +32,7 @@ class LoginController
             $_SESSION['username'] = $fetched_user->username;
             $user = $fetched_user;
             $user->isLogin = true;
-            
+
             header('Location: /');
         } else {
             return view('auth/login', [
@@ -40,5 +40,11 @@ class LoginController
                 'error' => '* نام کاربری یا رمز عبور اشتباه می‌باشد.'
             ]);
         }
+    }
+
+    function logout()
+    {
+        session_destroy();
+        header('Location: /login');
     }
 }
