@@ -20,7 +20,7 @@ class LoginController
         if (empty($username) || empty($password)) {
             return view('auth/login', [
                 'page_title' => 'ورود به سیستم',
-                'error' => '* نام کاربری یا رمز عبور نمی‌ تواند خالی باشد.'
+                'error' => '* نام کاربری یا رمز عبور نمی‌ تواند خالی باشد.',
             ]);
         }
 
