@@ -1,5 +1,5 @@
-<!-- Component Start -->
-<div id="sidebar" class=" fixed z-1 min-h-screen flex flex-col items-center w-60  overflow-hidden text-white bg-indigo-600 shadow-lime-800">
+<!-- Sidebar -->
+<aside id="sidebar" class=" fixed z-1 min-h-screen flex flex-col items-center w-60  overflow-hidden text-white bg-indigo-600 shadow-lime-800">
     <div class="flex justify-between items-center w-full px-3 mt-3">
         <span class="flex items-center">
             <svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -79,4 +79,4 @@
             <span class="ml-2 text-sm px-2"> خروج از حساب</span>
         </button>
     </form>
-</div>
+</aside>

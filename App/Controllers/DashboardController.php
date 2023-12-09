@@ -8,7 +8,9 @@ class DashboardController
 {
     public function index()
     {
-        echo jDateTime::date('l j F Y H:i');
-        view('dashboard', ['page_title' => 'داشبورد']);
+        view('dashboard', [
+            'page_title' => 'داشبورد',
+            'today' => jDateTime::date('l j F Y H:i')
+        ]);
     }
 }
