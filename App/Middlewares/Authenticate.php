@@ -4,6 +4,7 @@ namespace App\Middlewares;
 
 use App\Core\Auth\Auth;
 use App\Middlewares\Contracts\MiddlewareInterface;
+use App\Utilities\Url;
 
 class Authenticate implements MiddlewareInterface
 {
@@ -18,13 +19,13 @@ class Authenticate implements MiddlewareInterface
 
         // Check if the user is not logged in and not on the login route
         if (!Auth::check() && $currentRoute !== $loginRoute) {
-            $this->redirect(site_url());
+            $this->redirect(Url::route('login'));
             return false; // Indicate that the middleware processing was not successful
         }
 
         // Check if the user is logged in and trying to access the login route
         if (Auth::check() && $currentRoute == $loginRoute) {
-            $this->redirect('/');
+            $this->redirect(Url::route('dashboard'));
             return false; // Indicate that the middleware processing was not successful
         }
 

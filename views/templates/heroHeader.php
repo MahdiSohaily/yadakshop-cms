@@ -12,4 +12,4 @@
     <script src="<?= asset_url('js/helpers.js') ?>"></script>
 </head>
 
-<body >
+<body class="min-h-fit">
