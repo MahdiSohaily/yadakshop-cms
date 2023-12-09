@@ -66,7 +66,6 @@ class Route
         return self::$currentRoute;
     }
 
-
     public function name($name)
     {
         // Set the name for the current route
@@ -74,10 +73,14 @@ class Route
         return $this; // Return the current route instance for further chaining
     }
 
-    public function middleware($middleware)
+    public function middleware($middlewares)
     {
-        // Add the provided middleware to the current route
-        self::$routes[count(self::$routes) - 1]['middleware'][] = $middleware;
+        // Add the provided middleware or middlewares to the current route
+        self::$routes[count(self::$routes) - 1]['middleware'] = array_merge(
+            self::$routes[count(self::$routes) - 1]['middleware'] ?? [],
+            (array)$middlewares
+        );
+
         return $this; // Return the current route instance for further chaining
     }
 }
