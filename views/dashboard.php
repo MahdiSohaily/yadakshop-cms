@@ -7,7 +7,7 @@ require_once BASE_PATH . 'views/inventory/components/navbar.php';
 require_once BASE_PATH . 'views/inventory/components/aside.php';
 ?>
 
-<section class="">
+<section class="mt-14 p-5">
     <p class=""><?= $today ?></p>
 </section>
 

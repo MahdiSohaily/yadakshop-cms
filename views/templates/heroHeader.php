@@ -12,4 +12,4 @@
     <script src="<?= asset_url('js/helpers.js') ?>"></script>
 </head>
 
-<body class="mt-14 p-8">
+<body >

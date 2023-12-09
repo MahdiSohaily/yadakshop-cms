@@ -13,7 +13,7 @@ require_once BASE_PATH . 'views/templates/heroHeader.php';
 </style>
 
 <section class="login_bg">
-    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto min-h-screen lg:py-0">
         <a href="<?= site_url() ?>" class="flex items-center mb-6 text-3xl font-semibold text-white">
             مجموعه یدک شاپ
         </a>
