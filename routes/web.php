@@ -10,3 +10,4 @@ Route::get('/', ['DashboardController', 'index'], [Authenticate::class]);
 Route::get('/login', ['LoginController', 'index'], [Authenticate::class]);
 Route::post('/login/check', ['LoginController', 'validate']);
 Route::post('/logout', ['LoginController', 'logout']);
+

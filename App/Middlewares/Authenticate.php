@@ -13,13 +13,13 @@ class Authenticate implements MiddlewareInterface
         if (session_status() !== PHP_SESSION_ACTIVE) {
             session_start();
         }
-        
+
         $currentRoute = $_SERVER['REQUEST_URI'];
-        $loginRoute = site_url(); // Adjust this based on your actual login route
+        $loginRoute = '/login'; // Adjust this based on your actual login route
 
         // Check if the user is not logged in and not on the login route
         if (!Auth::check() && $currentRoute !== $loginRoute) {
-            $this->redirect($loginRoute);
+            $this->redirect(site_url());
         }
 
         // Check if the user is logged in and trying to access the login route
