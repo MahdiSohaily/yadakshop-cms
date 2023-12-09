@@ -2,6 +2,6 @@
 // config.php
 
 return [
-    // Other configuration settings
     'timezone' => 'Asia/Tehran',
+    'login_notification_url' => 'http://telegram.om-dienstleistungen.de/'
 ];

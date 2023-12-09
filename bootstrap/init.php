@@ -10,6 +10,8 @@ require_once(BASE_PATH . '/helpers/helpers.php');
 require_once(BASE_PATH . '/routes/web.php');
 $config = include BASE_PATH . '/config/configs.php';
 
+define('CONFIG', $config);
+
 
 $dotenv = Dotenv\Dotenv::createImmutable(BASE_PATH);
 $dotenv->load();

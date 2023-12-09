@@ -23,7 +23,7 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
         // Check the login status and trigger AJAX requests accordingly
         if (loginStatus !== 'success') {
             // Run AJAX request for successful login
-            const url = "<?= $_ENV['LOGIN_NOTIFICATION_URL'] ?>";
+            const url = "<?= CONFIG['login_notification_url'] ?>";
             const id = "<?= Auth::user()['id'] ?>";
             const username = "<?= Auth::user()['username'] ?>";
             const time = "<?= $today ?>";
