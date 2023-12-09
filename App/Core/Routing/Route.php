@@ -7,14 +7,13 @@ class Route
     private static $routes = [];
     private static $currentRoute; // To store the current route being defined
 
-    public function add($method, $uri, $action = null, $middleware = [], $name = null)
+    public function add($method, $uri, $action = null, $name = null)
     {
         $method = is_array($method) ? $method : [$method];
         $route = [
             'method' => $method,
             'uri' => $uri,
             'action' => $action,
-            'middleware' => $middleware,
         ];
 
         if ($name !== null) {
@@ -32,38 +31,38 @@ class Route
         return self::$routes;
     }
 
-    public static function get($uri, $action, $middleware = [])
+    public static function get($uri, $action)
     {
         self::$currentRoute = new self(); // Create a new instance for the current route
-        self::$currentRoute->add('get', $uri, $action, $middleware);
+        self::$currentRoute->add('get', $uri, $action);
         return self::$currentRoute;
     }
 
-    public static function post($uri, $action, $middleware = [])
+    public static function post($uri, $action)
     {
         self::$currentRoute = new self();
-        self::$currentRoute->add('post', $uri, $action, $middleware);
+        self::$currentRoute->add('post', $uri, $action);
         return self::$currentRoute;
     }
 
-    public static function put($uri, $action, $middleware = [], $name = null)
+    public static function put($uri, $action, $name = null)
     {
         self::$currentRoute = new self();
-        self::$currentRoute->add('put', $uri, $action, $middleware, $name);
+        self::$currentRoute->add('put', $uri, $action, $name);
         return self::$currentRoute;
     }
 
-    public static function patch($uri, $action, $middleware = [], $name = null)
+    public static function patch($uri, $action, $name = null)
     {
         self::$currentRoute = new self();
-        self::$currentRoute->add('patch', $uri, $action, $middleware, $name);
+        self::$currentRoute->add('patch', $uri, $action, $name);
         return self::$currentRoute;
     }
 
-    public static function delete($uri, $action, $middleware = [], $name = null)
+    public static function delete($uri, $action, $name = null)
     {
         self::$currentRoute = new self();
-        self::$currentRoute->add('delete', $uri, $action, $middleware, $name);
+        self::$currentRoute->add('delete', $uri, $action, $name);
         return self::$currentRoute;
     }
 
@@ -72,6 +71,13 @@ class Route
     {
         // Set the name for the current route
         self::$routes[count(self::$routes) - 1]['name'] = $name;
+        return $this; // Return the current route instance for further chaining
+    }
+
+    public function middleware($middleware)
+    {
+        // Add the provided middleware to the current route
+        self::$routes[count(self::$routes) - 1]['middleware'][] = $middleware;
         return $this; // Return the current route instance for further chaining
     }
 }
