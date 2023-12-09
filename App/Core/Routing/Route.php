@@ -46,7 +46,27 @@ class Route
         return self::$currentRoute;
     }
 
-    // Add similar methods for other HTTP methods
+    public static function put($uri, $action, $middleware = [], $name = null)
+    {
+        self::$currentRoute = new self();
+        self::$currentRoute->add('put', $uri, $action, $middleware, $name);
+        return self::$currentRoute;
+    }
+
+    public static function patch($uri, $action, $middleware = [], $name = null)
+    {
+        self::$currentRoute = new self();
+        self::$currentRoute->add('patch', $uri, $action, $middleware, $name);
+        return self::$currentRoute;
+    }
+
+    public static function delete($uri, $action, $middleware = [], $name = null)
+    {
+        self::$currentRoute = new self();
+        self::$currentRoute->add('delete', $uri, $action, $middleware, $name);
+        return self::$currentRoute;
+    }
+
 
     public function name($name)
     {
