@@ -4,14 +4,11 @@ namespace App\Models\Contracts;
 
 use Medoo\Medoo;
 
-
-class mysqlBaseModel extends BaseModel
+class MysqlBaseModel extends BaseModel
 {
 
     public function __construct($id = null)
     {
-        // Stablish connection on the base model
-        // using Medoo query builder library
         try {
             $this->connection = new Medoo([
                 'type' => 'mysql',
@@ -22,19 +19,18 @@ class mysqlBaseModel extends BaseModel
                 'error' => \PDO::ERRMODE_EXCEPTION,
             ]);
         } catch (\PDOException $th) {
+            // Handle the exception, log it, or rethrow if necessary
             throw $th;
         }
 
-        // Check if the Model primary key is passed to the
-        // constructor and assign the specific record properties
-        // to the corresponding object
         if (!is_null($id)) {
             $this->find($id);
         }
     }
 
-    /**  create new record using passed data in the specified table
-     *   return last inserted record id
+    /**
+     * Create a new record using passed data in the specified table
+     * Return last inserted record id
      */
     public function create(array $data): int
     {
@@ -43,11 +39,10 @@ class mysqlBaseModel extends BaseModel
     }
 
     /**
-     * @param int $id should be unique primary key
-     * finding a unique record using primary key
-     * sets the object properties using column names and values
+     * Find a unique record using the primary key
+     * Set the object properties using column names and values
      */
-    public function find( $id): object | null
+    public function find($id): ?object
     {
         $record = $this->connection->get($this->table, '*', [$this->primaryKey => $id]) ?? [];
         foreach ($record as $key => $value) {
@@ -56,15 +51,16 @@ class mysqlBaseModel extends BaseModel
         return $this;
     }
 
-    // select all the existing records and columns in a table
+    /**
+     * Select all the existing records and columns in a table
+     */
     public function getAll(): array
     {
         return $this->connection->select($this->table, "*");
     }
 
     /**
-     * select a portion of data by specifying where conditions
-     * and specific column names 
+     * Select a portion of data by specifying where conditions and specific column names
      */
     public function get(array $columns, array $where): array
     {
@@ -72,26 +68,27 @@ class mysqlBaseModel extends BaseModel
     }
 
     /**
-     * update a specific record in database
-     * @param array $data array of new record values
-     * @param array $where array of conditions for the update operation
-     * return the number of affected rows
+     * Update a specific record in the database
+     * Return the number of affected rows
      */
     public function update(array $data, array $where): int
     {
         $result = $this->connection->update($this->table, $data, $where);
-        return $result->rowCount() ?? -1;
+        return $result->rowCount();
     }
 
     /**
-     * delete specific rows by specifying 
-     * where condition and return the number of affected rows
+     * Delete specific rows by specifying where condition and return the number of affected rows
      */
     public function delete(array $where): int
     {
-        return $this->connection->delete($this->table, $where)->rowCount() ?? -1;
+        $result = $this->connection->delete($this->table, $where);
+        return $result->rowCount();
     }
 
+    /**
+     * Remove a record
+     */
     public function remove()
     {
         $record_id = $this->{$this->primaryKey};
@@ -99,6 +96,9 @@ class mysqlBaseModel extends BaseModel
         return $record_id;
     }
 
+    /**
+     * Save changes to a record
+     */
     public function save(): int
     {
         $record_id = $this->{$this->primaryKey};
