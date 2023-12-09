@@ -14,9 +14,8 @@ class LoginController
 
     public function validate(Request $request)
     {
-        global $user;
         $username = sanitizeString($request->input('username'));
-        $password = trim(($request->input('password')));
+        $password = sanitizeString($request->input('password'));
 
         if (empty($username) || empty($password)) {
             return view('auth/login', [
@@ -25,15 +24,14 @@ class LoginController
             ]);
         }
 
-        $fetched_user = new User($username);
+        $user = new User($username);
 
-        if ($fetched_user && password_verify($password, $fetched_user->password)) {
-            $_SESSION['user_id'] = $fetched_user->id;
-            $_SESSION['username'] = $fetched_user->username;
-            $user = $fetched_user;
-            $user->isLogin = true;
+        if ($user && password_verify($password, $user->password)) {
+            $_SESSION['user_id'] = $user->id;
+            $_SESSION['username'] = $user->username;
 
             header('Location: /');
+            exit();
         } else {
             return view('auth/login', [
                 'page_title' => 'ورود به سیستم',
@@ -42,9 +40,10 @@ class LoginController
         }
     }
 
-    function logout()
+    public function logout()
     {
         session_destroy();
         header('Location: /login');
+        exit();
     }
 }
