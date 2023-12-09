@@ -1,25 +1,28 @@
-function sendAjaxRequest(url, id, username, time, host, ip) {
-  var params = {
-    sendMessage: "local",
-    id,
-    username,
-    time,
-    host,
-    ip,
-  };
+function sendAjaxRequestForSuccessfulLogin(url, id, username, time, host, ip) {
+  let params = new URLSearchParams();
+  params.append("sendMessage", "local");
+  params.append("id", id);
+  params.append("username", username);
+  params.append("time", time);
+  params.append("host", host);
+  params.append("ip", ip);
+  // Use Axios for the AJAX request
 
-  $.ajax({
-    method: "POST",
-    url,
-    data: params,
-    success: function (response) {
-      window.location.href = "index.php?msg=<?= $username ?>";
-    },
-    error: function (error) {
-      window.location.href = "index.php?msg=<?= $username ?>";
-    },
-  });
+  console.log(url);
+
+  // axios
+  //   .post(url, params)
+  //   .then(function (response) {
+  //     console.log(response.data);
+  //     // // Handle the success response
+  //     // window.location.href = `index.php?msg=${username}`;
+  //   })
+  //   .catch(function (error) {
+  //     // // Handle errors
+  //     // window.location.href = `index.php?msg=${username}`;
+  //   });
 }
+
 function sendLoginAttemptAlert(url, username, password, time, host, ip) {
   var data = {
     sendMessage: "attempt",
@@ -31,7 +34,7 @@ function sendLoginAttemptAlert(url, username, password, time, host, ip) {
     password,
   };
 
-  $.ajax({
+  jQuery.ajax({
     type: "POST",
     url,
     data: data,
