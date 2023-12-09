@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-use App\Core\Auth\Auth;
+use App\Utilities\Url;
 
 class DashboardController
 {
     public function index()
     {
-        print_r(Auth::user());
+        print_r(Url::route('login.check'));
         view('dashboard', ['page_title' => 'داشبورد']);
     }
 }

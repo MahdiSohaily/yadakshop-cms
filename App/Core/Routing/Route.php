@@ -2,15 +2,29 @@
 
 namespace App\Core\Routing;
 
-use App\Middlewares\Authorize;
-
 class Route
 {
     private static $routes = [];
-    public static function add($method, $uri, $action = null, $middleware = [])
+    private static $currentRoute; // To store the current route being defined
+
+    public function add($method, $uri, $action = null, $middleware = [], $name = null)
     {
         $method = is_array($method) ? $method : [$method];
-        array_push(self::$routes, ['method' => $method, 'uri' => $uri, 'action' => $action, 'middleware' => $middleware]);
+        $route = [
+            'method' => $method,
+            'uri' => $uri,
+            'action' => $action,
+            'middleware' => $middleware,
+        ];
+
+        if ($name !== null) {
+            $route['name'] = $name;
+        }
+
+        array_push(self::$routes, $route);
+
+        // Return the current route instance for chaining
+        return $this;
     }
 
     public static function routes()
@@ -20,26 +34,24 @@ class Route
 
     public static function get($uri, $action, $middleware = [])
     {
-        self::add('get', $uri, $action, $middleware);
+        self::$currentRoute = new self(); // Create a new instance for the current route
+        self::$currentRoute->add('get', $uri, $action, $middleware);
+        return self::$currentRoute;
     }
 
     public static function post($uri, $action, $middleware = [])
     {
-        self::add('post', $uri, $action, $middleware);
+        self::$currentRoute = new self();
+        self::$currentRoute->add('post', $uri, $action, $middleware);
+        return self::$currentRoute;
     }
 
-    public static function put($uri, $action, $middleware = [])
-    {
-        self::add('put', $uri, $action, $middleware);
-    }
+    // Add similar methods for other HTTP methods
 
-    public static function patch($uri, $action, $middleware = [])
+    public function name($name)
     {
-        self::add('patch', $uri, $action, $middleware);
-    }
-
-    public static function delete($uri, $action, $middleware = [])
-    {
-        self::add('delete', $uri, $action, $middleware);
+        // Set the name for the current route
+        self::$routes[count(self::$routes) - 1]['name'] = $name;
+        return $this; // Return the current route instance for further chaining
     }
 }
