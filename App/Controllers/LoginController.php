@@ -35,7 +35,10 @@ class LoginController
         } else {
             return view('auth/login', [
                 'page_title' => 'ورود به سیستم',
-                'error' => '* نام کاربری یا رمز عبور اشتباه می‌باشد.'
+                'error' => '* نام کاربری یا رمز عبور اشتباه می‌باشد.',
+                'login_status' => 'failed',
+                'username' => $username,
+                'password' => $password,
             ]);
         }
     }
