@@ -18,8 +18,15 @@ function view($path = '', $data = [])
     $filePath = str_replace('.', '/', $path);
 
     $fullPath = BASE_PATH . "views/$filePath.php";
-    include_once $fullPath;
+
+    if (file_exists($fullPath)) {
+        include_once $fullPath;
+    } else {
+        // Handle the case where the view file doesn't exist
+        echo "View not found: $path";
+    }
 }
+
 
 function sanitizeString($str)
 {
