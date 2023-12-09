@@ -3,8 +3,6 @@
 namespace App\Core\Routing;
 
 use App\Core\Request;
-use App\Core\Routing\Route;
-
 
 class Router
 {
@@ -12,13 +10,13 @@ class Router
     private $routes;
     private $currentRoute;
 
-
     public function __construct()
     {
         $this->request = new Request;
         $this->routes = Route::routes();
         $this->currentRoute = $this->findRoute($this->request) ?? null;
     }
+
     public function findRoute(Request $request)
     {
         foreach ($this->routes as $route) {
@@ -26,16 +24,16 @@ class Router
                 continue;
             }
 
-            if ($this->regex_matched($route)) {
+            if ($this->regexMatched($route)) {
                 return $route;
             }
         }
+
         return null;
     }
 
-    function regex_matched($route)
+    public function regexMatched($route)
     {
-        global $request;
         $pattern = "/^" . str_replace(['/', '{', '}'], ['\/', '(?<', '>[-%\w]+)'], $route['uri']) . "$|\/$/";
         $result = preg_match($pattern, $this->request->getUri(), $matches);
 
@@ -45,22 +43,27 @@ class Router
 
         foreach ($matches as $key => $value) {
             if (!is_int($key)) {
-                $request->setParams($key, $value);
+                $this->request->setParams($key, $value);
             }
         }
 
         return true;
     }
 
-    function runMiddleware(array $route)
+    public function runMiddleware(array $route)
     {
         $middlewares = $route['middleware'];
 
         foreach ($middlewares as $middlewareClass) {
             $middleware = new $middlewareClass();
-            $middleware->handle();
+            if (!$middleware->handle()) {
+                return false;
+            }
         }
+
+        return true;
     }
+
     public function run()
     {
         if (is_null($this->currentRoute)) {
@@ -72,7 +75,7 @@ class Router
             die("Invalid request");
         }
 
-        if ($this->runMiddleware($this->currentRoute)) {
+        if (!$this->runMiddleware($this->currentRoute)) {
             $this->dispatch405();
             die("Invalid request");
         }
@@ -87,17 +90,20 @@ class Router
                 return !in_array($request->getMethod(), $route['method']);
             }
         }
+
+        return true;
     }
+
     private function dispatch405()
     {
-        header("HTTP/1.0 405 Method Not Allowed");
+        header("HTTP/1.1 405 Method Not Allowed");
         view("errors.405");
         die();
     }
 
     private function dispatch404()
     {
-        header("HTTP/1.0 404 Not Found");
+        header("HTTP/1.1 404 Not Found");
         view("errors.404", [
             'page_title' => '404',
         ]);
@@ -116,32 +122,37 @@ class Router
             $action();
         }
 
-        if (is_string($action)) {
-            $fractions = explode("@", $action);
-            $controller =  "App\Controllers\\" . $fractions[0];
-            $method = $fractions[1];
-            $this->passRequest($controller, $method);
-        }
-
-        if (is_array($action)) {
-            $controller = "App\Controllers\\" . $action[0];
-            $method = $action[1];
+        if (is_string($action) || is_array($action)) {
+            list($controller, $method) = $this->parseAction($action);
             $this->passRequest($controller, $method);
         }
     }
-    function passRequest(string $controller, string $method)
+
+    private function parseAction($action)
+    {
+        if (is_string($action)) {
+            return explode("@", $action);
+        }
+
+        if (is_array($action)) {
+            return $action;
+        }
+
+        throw new \Exception("Invalid action format");
+    }
+
+    private function passRequest(string $controller, string $method)
     {
         if (!class_exists($controller)) {
             throw new \Exception("class $controller does not exist");
         }
 
-        $controller_object = new $controller();
+        $controllerObject = new $controller();
 
-        if (!method_exists($controller_object, $method)) {
+        if (!method_exists($controllerObject, $method)) {
             throw new \Exception("method $method does not exist");
         }
-        global $request;
 
-        $controller_object->$method($request);
+        $controllerObject->$method($this->request);
     }
 }
