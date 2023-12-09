@@ -1,7 +1,8 @@
 {
   "require": {
     "vlucas/phpdotenv": "^5.5",
-    "catfan/medoo": "^2.1"
+    "catfan/medoo": "^2.1",
+    "sallar/jdatetime": "dev-master"
   },
   "autoload": {
     "psr-4": {

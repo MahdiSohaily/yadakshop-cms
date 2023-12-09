@@ -2,12 +2,13 @@
 
 namespace App\Controllers;
 
-use App\Utilities\Url;
+use jDateTime;
 
 class DashboardController
 {
     public function index()
     {
+        echo jDateTime::date('l j F Y H:i');
         view('dashboard', ['page_title' => 'داشبورد']);
     }
 }
