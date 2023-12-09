@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Auth\Auth;
+namespace App\Core\Auth;
 
 use App\Models\User;
 
@@ -13,10 +13,10 @@ class Auth
         }
 
         // Check if the user is authenticated
-        if (isset($_SESSION['user_id'])) {
+        if (isset($_SESSION['username'])) {
             // Fetch user information from the database based on the user_id
-            $user = new User($_SESSION['user_id']);
-            return $user;
+            $user = new User($_SESSION['username']);
+            return $user->getAttributes();
         }
 
         return null;
