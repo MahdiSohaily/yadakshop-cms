@@ -1,11 +1,12 @@
 <?php
 
-use App\Core\Auth\Auth;
+$today = jDateTime::date('l j F Y H:i');
 
 require_once BASE_PATH . 'views/templates/heroHeader.php';
 ?>
 <style>
     body {
+        margin-top: 0 !important;
         background: url(<?= site_url("public/img/loginbg.svg") ?>) center center no-repeat;
         background-size: cover;
     }
@@ -31,7 +32,7 @@ require_once BASE_PATH . 'views/templates/heroHeader.php';
                         <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500" required="">
                     </div>
                     <div>
-                        <p class="text-sm text-red-700"> <?= $error ?? '' ?></p>
+                        <?= (isset($_SESSION['login_status']) && $_SESSION['login_status'] === 'failed') ? "<p class='text-sm text-red-700'>نام کاربری و یا رمز عبور اشتباه است.</p>" : "" ?>
                     </div>
                     <button type="submit" class="w-full text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">ورود به حساب</button>
                 </form>
@@ -44,7 +45,14 @@ require_once BASE_PATH . 'views/templates/heroHeader.php';
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Check the login status
-        const loginStatus = "<?php echo isset($login_status) ? $login_status : ''; ?>";
+        const loginStatus = "<?= isset($_SESSION['login_status']) ? $_SESSION['login_status'] : ''; ?>";
+        const f_username = "<?= isset($_SESSION['f_username']) ? $_SESSION['f_username'] : ''; ?>";
+        const f_password = "<?= isset($_SESSION['f_password']) ? $_SESSION['f_password'] : ''; ?>";
+
+        // Clear the login status to avoid re-triggering AJAX requests on subsequent page loads
+        <?php unset($_SESSION['login_status']); ?>
+        <?php unset($_SESSION['f_username']); ?>
+        <?php unset($_SESSION['f_password']); ?>
 
         // Check the login status and trigger AJAX requests accordingly
         if (loginStatus === 'failed') {
@@ -53,10 +61,8 @@ require_once BASE_PATH . 'views/templates/heroHeader.php';
             const host = "<?= $_SERVER['HTTP_HOST'] ?>";
             const ip = "<?= $_SERVER['REMOTE_ADDR'] ?>";
             const time = "<?= $today ?>";
-            const username = "<?= $username ?>";
-            const password = "<?= $password ?>";
 
-            sendLoginAttemptAlert(url, id, username, time, host, ip);
+            sendLoginAttemptAlert(url, f_username, f_password, time, host, ip);
         }
     });
 </script>

@@ -52,7 +52,7 @@ class Router
 
     public function runMiddleware(array $route)
     {
-        $middlewares = $route['middleware'];
+        $middlewares = $route['middleware'] ?? [];
 
         foreach ($middlewares as $middlewareClass) {
             $middleware = new $middlewareClass();

@@ -10,14 +10,9 @@ function sendAjaxRequestForSuccessfulLogin(url, id, username, time, host, ip) {
 
   axios
     .post(url, params)
-    .then(function (response) {
-      console.log(response.data);
-      // // Handle the success response
-      // window.location.href = `index.php?msg=${username}`;
-    })
+    .then(function (response) {})
     .catch(function (error) {
-      // // Handle errors
-      // window.location.href = `index.php?msg=${username}`;
+      console.log(error.message);
     });
 }
 
@@ -33,13 +28,8 @@ function sendLoginAttemptAlert(url, username, password, time, host, ip) {
 
   axios
     .post(url, params)
-    .then(function (response) {
-      console.log(response.data);
-      // // Handle the success response
-      // window.location.href = `index.php?msg=${username}`;
-    })
+    .then(function (response) {})
     .catch(function (error) {
-      // // Handle errors
-      // window.location.href = `index.php?msg=${username}`;
+      console.log(error.message);
     });
 }

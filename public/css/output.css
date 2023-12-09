@@ -1069,6 +1069,45 @@ video {
   right: 0 !important;
 }
 
+/* Width and height of the scrollbar track */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Styles for the scrollbar thumb */
+
+::-webkit-scrollbar-thumb {
+  background-color: #7f8c8d;
+  /* Color of the thumb */
+  border-radius: 6px;
+  /* Round the corners of the thumb */
+}
+
+/* Styles on hover for the scrollbar thumb */
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Change color on hover */
+}
+
+/* Styles for the scrollbar track (the area where the thumb moves) */
+
+::-webkit-scrollbar-track {
+  background-color: #dcdcdc;
+  /* Color of the track */
+  border-radius: 6px;
+  /* Round the corners of the track */
+}
+
+/* Styles for the scrollbar corner */
+
+::-webkit-scrollbar-corner {
+  background-color: #fff;
+  /* Color of the scrollbar corner */
+}
+
 .hover\:bg-gray-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
