@@ -1,5 +1,7 @@
 <?php
 
+use App\Core\Auth\Auth;
+
 function site_url(string $url = ''): string
 {
     return $_ENV['HOST_ADDR'] . $url;
@@ -13,6 +15,7 @@ function asset_url(string $url = ''): string
 
 function view($path = '', $data = [])
 {
+    $data['user'] = Auth::user();
     extract($data);
 
     $filePath = str_replace('.', '/', $path);
