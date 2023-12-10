@@ -681,6 +681,14 @@ video {
   height: 100vh;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
 .min-h-fit {
   min-height: -moz-fit-content;
   min-height: fit-content;
@@ -726,6 +734,10 @@ video {
   width: 100vw;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .max-w-xs {
   max-width: 20rem;
 }
@@ -736,6 +748,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.cursor-auto {
+  cursor: auto;
 }
 
 .flex-col {
@@ -958,6 +974,10 @@ video {
 
 .ps-4 {
   padding-inline-start: 1rem;
+}
+
+.ps-2 {
+  padding-inline-start: 0.5rem;
 }
 
 .text-center {

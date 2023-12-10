@@ -5,12 +5,16 @@ namespace App\Controllers;
 use App\Models\User;
 use App\Core\Request;
 use App\Utilities\Url;
+use jDateTime;
 
 class LoginController
 {
     public function index()
     {
-        view('auth/login', ['page_title' => 'ورود به سیستم']);
+        view('auth/login', [
+            'page_title' => 'ورود به سیستم',
+            'today' => jDateTime::date('l j F Y H:i')
+        ]);
     }
 
     public function validate(Request $request)
@@ -22,6 +26,7 @@ class LoginController
             return view('auth/login', [
                 'page_title' => 'ورود به سیستم',
                 'error' => '* نام کاربری یا رمز عبور نمی‌ تواند خالی باشد.',
+                'today' => jDateTime::date('l j F Y H:i')
             ]);
         }
 

@@ -1,7 +1,4 @@
 <?php
-
-$today = jDateTime::date('l j F Y H:i');
-
 require_once BASE_PATH . 'views/templates/heroHeader.php';
 ?>
 <style>
@@ -62,7 +59,7 @@ require_once BASE_PATH . 'views/templates/heroHeader.php';
             const ip = "<?= $_SERVER['REMOTE_ADDR'] ?>";
             const time = "<?= $today ?>";
 
-            sendLoginAttemptAlert(url, f_username, f_password, time, host, ip);
+            // sendLoginAttemptAlert(url, f_username, f_password, time, host, ip);
         }
     });
 </script>
