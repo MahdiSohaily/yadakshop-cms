@@ -2,7 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* Your custom styles go here */
+/* ----------------------------------- General Styles of the project --------------------------------------------- */
 @font-face {
     font-family: sahel;
     font-style: normal;
@@ -35,29 +35,15 @@
     font-family: sahel, Arial, Helvetica, sans-serif;
 }
 
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: all 0.3s ease-in-out;
-    right: -500px;
-}
-
-.active {
-    right: 0 !important;
-}
-
 /* Width and height of the scrollbar track */
 ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 4px;
 }
 
 /* Styles for the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
     background-color: #7f8c8d;
-    /* Color of the thumb */
-    border-radius: 6px;
     /* Round the corners of the thumb */
 }
 
@@ -70,8 +56,6 @@
 /* Styles for the scrollbar track (the area where the thumb moves) */
 ::-webkit-scrollbar-track {
     background-color: #dcdcdc;
-    /* Color of the track */
-    border-radius: 6px;
     /* Round the corners of the track */
 }
 
@@ -80,6 +64,8 @@
     background-color: #fff;
     /* Color of the scrollbar corner */
 }
+
+/* ----------------------------------------- NAVBAR STYLES --------------------------------------- */
 
 .tooltip {
     display: none;
@@ -100,4 +86,18 @@
 
 .tooltip_container:hover>.tooltip {
     display: block !important;
+}
+
+
+/* ---------------------------------------- SIDEBAR STYLES ------------------------------------------ */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    right: -500px;
+}
+
+.active {
+    right: 0 !important;
 }
