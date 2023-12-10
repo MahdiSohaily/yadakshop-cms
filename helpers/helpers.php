@@ -15,7 +15,7 @@ function asset_url(string $url = ''): string
 
 function view($path = '', $data = [])
 {
-    $data['user'] = Auth::user();
+    $data['user'] = $_SESSION['user'];
     extract($data);
 
     $filePath = str_replace('.', '/', $path);

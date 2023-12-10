@@ -35,6 +35,7 @@ class LoginController
         if ($user && password_verify($password, $user->password)) {
             $_SESSION['user_id'] = $user->id;
             $_SESSION['username'] = $user->username;
+            $_SESSION['user'] = $user->getAttributes();
             $_SESSION['login_status'] = 'success';
 
             header('Location: ' . Url::route('dashboard'));
