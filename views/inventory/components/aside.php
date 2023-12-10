@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<aside id="sidebar" class=" fixed z-1 min-h-screen flex flex-col items-center w-60  overflow-hidden text-white bg-indigo-600 shadow-lime-800">
+<aside id="sidebar" class=" fixed z-1 min-h-screen flex flex-col items-center w-60  overflow-hidden text-white bg-gray-800 shadow-lime-800">
     <div class="flex justify-between items-center w-full px-3 mt-3">
         <span class="flex items-center">
             <svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -8,8 +8,8 @@
             <span class="ml-2 text-sm font-bold px-2">یدک شاپ</span>
         </span>
 
-        <svg width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" onclick="toggleSidebar()">
-            <path fill="red" d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z" />
+        <svg class="cursor-pointer" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" onclick="toggleSidebar()">
+            <path fill="#fff" d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z" />
         </svg>
     </div>
     <div class="w-full px-2">
