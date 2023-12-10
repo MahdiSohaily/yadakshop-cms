@@ -1,18 +1,16 @@
 <header class="fixed top-0 left-0 right-0 flex align-center justify-between px-5 h-15 text-white bg-gray-800 shadow-lg">
     <ul class="flex">
-        <li class="flex items-center">
-            <a class="flex items-center py-4 hover:text-gray-200 p-3 ml-5" href="#open" onclick="toggleSidebar()">
-                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_429_11066)">
-                        <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_429_11066">
-                            <rect width="24" height="24" fill="white" transform="translate(0 0.000915527)" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </a>
+        <li class="flex items-center ml-5">
+            <svg class="cursor-pointer" onclick="toggleSidebar()" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_429_11066)">
+                    <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_429_11066">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.000915527)" />
+                    </clipPath>
+                </defs>
+            </svg>
         </li>
         <li class="flex items-center">
             <a class="flex items-center py-4 hover:text-gray-200 rounded p-2 ml-2 <?= $page_title == 'ورود کالا' ? 'bg-gray-700 ' : '' ?>" href="">
