@@ -106,3 +106,18 @@
     left: -100%;
     transition: all 0.5s ease-in-out;
 }
+
+.dropdown_container {
+    position: relative !important;
+}
+
+.dropdown_menu {
+    position: absolute;
+    display: none;
+    right: 100%;
+    top: 0;
+}
+
+.dropdown_container:hover .dropdown_menu {
+    display: block !important;
+}
