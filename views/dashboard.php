@@ -81,16 +81,16 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                             <tr>
                                 <th scope="col" class="px-6 py-3">
-                                    Name
+                                    شهرت
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Position
+                                    مسئولیت
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Status
+                                    داخلی
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Action
+                                    مدت زمان مکالمه
                                 </th>
                             </tr>
                         </thead>
