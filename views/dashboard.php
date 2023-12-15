@@ -76,7 +76,7 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
     <div class="grid grid-cols-2 px-5 gap-5">
         <div class="bg-white rounded-lg p-5">
             <div class="border border-dashed border-gray-300 flex flex-col items-center h-full  p-5 rounded-lg">
-                <div class="relative overflow-x-auto shadow-md sm:rounded-lg w-full">
+                <div class="overflow-x-auto shadow-md sm:rounded-lg w-full">
                     <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                             <tr>
