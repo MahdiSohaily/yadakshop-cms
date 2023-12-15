@@ -96,9 +96,9 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                         </thead>
                         <tbody>
                             <tr class="bg-white border-b hover:bg-gray-50 ">
-                                
+
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
-                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
+                                    <img class="w-10 h-10 rounded-full" src="<?= asset_url('img/5.jpg') ?>" alt="Jese image">
                                     <div class="ps-3">
                                         <div class="text-base font-semibold">Neil Sims</div>
                                         <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
@@ -117,9 +117,9 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                                 </td>
                             </tr>
                             <tr class="bg-white border-b hover:bg-gray-50 ">
-                                
+
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
-                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
+                                    <img class="w-10 h-10 rounded-full" src="<?= asset_url('img/1.jpg') ?>" alt="Jese image">
                                     <div class="ps-3">
                                         <div class="text-base font-semibold">Neil Sims</div>
                                         <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
@@ -138,9 +138,9 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                                 </td>
                             </tr>
                             <tr class="bg-white border-b hover:bg-gray-50 ">
-                                
+
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
-                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
+                                    <img class="w-10 h-10 rounded-full" src="<?= asset_url('img/6.jpg') ?>" alt="Jese image">
                                     <div class="ps-3">
                                         <div class="text-base font-semibold">Neil Sims</div>
                                         <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
@@ -159,9 +159,9 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                                 </td>
                             </tr>
                             <tr class="bg-white border-b hover:bg-gray-50 ">
-                                
+
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
-                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
+                                    <img class="w-10 h-10 rounded-full" src="<?= asset_url('img/21.jpg') ?>" alt="Jese image">
                                     <div class="ps-3">
                                         <div class="text-base font-semibold">Neil Sims</div>
                                         <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
@@ -180,9 +180,9 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                                 </td>
                             </tr>
                             <tr class="bg-white border-b hover:bg-gray-50 ">
-                                
+
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
-                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
+                                    <img class="w-10 h-10 rounded-full" src="<?= asset_url('img/33.jpg') ?>" alt="Jese image">
                                     <div class="ps-3">
                                         <div class="text-base font-semibold">Neil Sims</div>
                                         <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
