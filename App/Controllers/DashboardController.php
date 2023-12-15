@@ -10,7 +10,7 @@ class DashboardController
     {
         view('dashboard', [
             'page_title' => 'داشبورد',
-            'today' => jDateTime::date('l j F Y H:i'),
+            'today' => jDateTime::date('l j F Y'),
         ]);
     }
 }
