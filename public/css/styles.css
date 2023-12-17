@@ -31,10 +31,6 @@
     src: url("../fonts/Sahel-Black.woff") format("woff");
 }
 
-* {
-    font-family: sahel, Arial, Helvetica, sans-serif;
-}
-
 /* Width and height of the scrollbar track */
 ::-webkit-scrollbar {
     width: 8px;

@@ -100,20 +100,21 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
                                     <img class="w-10 h-10 rounded-full" src="<?= asset_url('img/5.jpg') ?>" alt="Jese image">
                                     <div class="ps-3">
-                                        <div class="text-base font-semibold">Neil Sims</div>
+                                        <div class="text-base font-semibold">مهدی رضایی</div>
                                         <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
                                     </div>
                                 </th>
                                 <td class="px-6 py-4">
-                                    React Developer
+                                    توسعه دهنده وب
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="flex items-center">
-                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
+                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                                        ۱۰۱
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
+                                    ۱ ساعت و ۴۵ دقیقه
                                 </td>
                             </tr>
                             <tr class="bg-white border-b hover:bg-gray-50 ">
@@ -121,20 +122,20 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
                                     <img class="w-10 h-10 rounded-full" src="<?= asset_url('img/1.jpg') ?>" alt="Jese image">
                                     <div class="ps-3">
-                                        <div class="text-base font-semibold">Neil Sims</div>
+                                        <div class="text-base font-semibold">نیایش زحیمی</div>
                                         <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
                                     </div>
                                 </th>
                                 <td class="px-6 py-4">
-                                    React Developer
+                                    مدیر فروشات
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="flex items-center">
-                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
+                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> ۱۰۲
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
+                                    ۱ ساعت و ۴۵ دقیقه
                                 </td>
                             </tr>
                             <tr class="bg-white border-b hover:bg-gray-50 ">
@@ -142,20 +143,21 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
                                     <img class="w-10 h-10 rounded-full" src="<?= asset_url('img/6.jpg') ?>" alt="Jese image">
                                     <div class="ps-3">
-                                        <div class="text-base font-semibold">Neil Sims</div>
+                                        <div class="text-base font-semibold">بابک صفری</div>
                                         <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
                                     </div>
                                 </th>
                                 <td class="px-6 py-4">
-                                    React Developer
+                                    مدیر فروشات
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="flex items-center">
-                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
+                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                                        ۱۰۳
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
+                                    ۱ ساعت و ۴۵ دقیقه
                                 </td>
                             </tr>
                             <tr class="bg-white border-b hover:bg-gray-50 ">
@@ -163,20 +165,21 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
                                     <img class="w-10 h-10 rounded-full" src="<?= asset_url('img/21.jpg') ?>" alt="Jese image">
                                     <div class="ps-3">
-                                        <div class="text-base font-semibold">Neil Sims</div>
+                                        <div class="text-base font-semibold">مریم امیردوست</div>
                                         <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
                                     </div>
                                 </th>
                                 <td class="px-6 py-4">
-                                    React Developer
+                                    بازاریاب
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="flex items-center">
-                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
+                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                                        ۱۰۴
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
+                                    ۱ ساعت و ۴۵ دقیقه
                                 </td>
                             </tr>
                             <tr class="bg-white border-b hover:bg-gray-50 ">
@@ -184,20 +187,21 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
                                     <img class="w-10 h-10 rounded-full" src="<?= asset_url('img/33.jpg') ?>" alt="Jese image">
                                     <div class="ps-3">
-                                        <div class="text-base font-semibold">Neil Sims</div>
+                                        <div class="text-base font-semibold">زینب سهیلی</div>
                                         <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
                                     </div>
                                 </th>
                                 <td class="px-6 py-4">
-                                    React Developer
+                                    بازاریاب
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="flex items-center">
-                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
+                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                                        ۱۰۵
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
+                                    ۱ ساعت و ۴۵ دقیقه
                                 </td>
                             </tr>
                         </tbody>

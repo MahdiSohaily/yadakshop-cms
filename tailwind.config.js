@@ -1,16 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./**/*.html",
-    "./**/*.php",
-    "./src/**/*.js", // Add any additional file patterns as needed
-  ],
-  direction: {
-    ltr: "ltr",
-    rtl: "rtl",
-  },
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+
+export const content = [
+  "./**/*.html",
+  "./**/*.php",
+  "./src/**/*.js", // Add any additional file patterns as needed
+];
+export const direction = {
+  ltr: "ltr",
+  rtl: "rtl",
 };
+export const theme = {
+  extend: {
+    fontFamily: {
+      sans: ["Sahel", "Arial", "Helvetica", "sans-serif"],
+    },
+  },
+};
+export const plugins = [];
