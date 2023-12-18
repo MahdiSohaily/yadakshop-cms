@@ -12,7 +12,7 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
 
 <!-- ------------------------------------------------ Dashboard card section ---------------------------------------------------- -->
 
-<section class="mt-14 p-5">
+<section class="container mx-auto mt-14 p-5">
     <h1 class="text-lg">داشبورد</h1>
     <div class="grid grid-cols-1 gap-5 mt-6 sm:grid-cols-2 lg:grid-cols-4">
         <div class="p-4 transition-shadow bg-white border rounded-lg shadow-sm hover:shadow-lg">
@@ -72,7 +72,7 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
 
 <!-- ---------------------------------------------- Dashboard users and calender ---------------------------------------------------- -->
 
-<section>
+<section class="container mx-auto">
     <div class="grid grid-cols-2 px-5 gap-5">
         <div class="bg-white rounded-lg p-5">
             <div class="border border-dashed border-gray-300 flex flex-col items-center h-full  p-5 rounded-lg">
