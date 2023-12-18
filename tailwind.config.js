@@ -16,7 +16,3 @@ export const theme = {
     },
   },
 };
-
-module.exports = {
-  plugins: ['prettier-plugin-tailwindcss'],
-}
