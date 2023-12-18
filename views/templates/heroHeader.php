@@ -12,4 +12,4 @@
     <script src="<?= asset_url('js/helpers.js') ?>"></script>
 </head>
 
-<body class="min-h-fit bg-gray-100">
+<body class="min-h-fit bg-gray-100 dark:bg-gray-900">

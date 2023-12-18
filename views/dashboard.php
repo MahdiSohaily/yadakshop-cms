@@ -73,7 +73,7 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
 <!-- ---------------------------------------------- Dashboard users and calender ---------------------------------------------------- -->
 
 <section class="container mx-auto">
-    <div class="grid grid-cols-2 px-5 gap-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 px-5 gap-5">
         <div class="bg-white rounded-lg p-5">
             <div class="border border-dashed border-gray-300 flex flex-col items-center h-full  p-5 rounded-lg">
                 <div class="overflow-x-auto shadow-md sm:rounded-lg w-full">
@@ -210,7 +210,7 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
 
             </div>
         </div>
-        <div class=" bg-gray-800 rounded-lg p-5">
+        <div class="bg-white dark:bg-gray-800   rounded-lg p-5">
             <div class="border border-dashed border-white flex flex-col items-center justify-center p-5 rounded-lg">
                 <h1 class="text-2xl font-bold text-center text-white mb-2"><?= $today ?></h1>
                 <p class="flex items-end mt-2 text-base text-center text-gray-400 gap-x-2">

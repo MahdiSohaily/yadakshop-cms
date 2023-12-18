@@ -1,18 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 
-export const content = [
-  "./**/*.html",
-  "./**/*.php",
-  "./src/**/*.js", // Add any additional file patterns as needed
-];
-export const direction = {
-  ltr: "ltr",
-  rtl: "rtl",
-};
-export const theme = {
-  extend: {
-    fontFamily: {
-      sans: ["Sahel", "Arial", "Helvetica", "sans-serif"],
+module.exports = {
+  darkMode: 'class', // Enable dark mode with class-based toggling
+
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Sahel', 'Arial', 'Helvetica', 'sans-serif'],
+      },
     },
   },
+
+  content: [
+    "./**/*.html",
+    "./**/*.php",
+    "./src/**/*.js", // Add any additional file patterns as needed
+  ],
+
+  direction: {
+    ltr: 'ltr',
+    rtl: 'rtl',
+  },
+
+  plugins: [
+    // Additional plugins can be added here
+  ],
 };
