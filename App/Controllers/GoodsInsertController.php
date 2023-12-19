@@ -13,7 +13,6 @@ class GoodsInsertController
 
         view('inventory/pages/insertGood', [
             'page_title' => 'ورود اجناس',
-            'brands' => $brand->getAll(),
             'today' => jDateTime::date('l j F Y H:i')
         ]);
     }

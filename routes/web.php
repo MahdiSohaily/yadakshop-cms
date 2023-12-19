@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\BrandController;
 use App\Core\Routing\Route;
 use App\Middlewares\Authenticate;
 use App\Middlewares\Authorize;
@@ -22,8 +23,10 @@ Route::post('/login/check', [LoginController::class, 'validate'])->name('login.c
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Search for specific part number
-
 Route::post('/parts/search', [PartSearchController::class, 'find'])->middleware(Authenticate::class)->name('parts.search');
+
+// Search for specific brand
+Route::post('/brands/search', [BrandController::class, 'find'])->middleware(Authenticate::class)->name('brands.search');
 
 // INSERT NEW GOODS routes
 Route::get('/goods', [GoodsInsertController::class, 'index'])->middleware(Authenticate::class)->name('good.inset');

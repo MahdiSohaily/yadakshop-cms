@@ -3,20 +3,20 @@ require_once BASE_PATH . 'views/templates/heroHeader.php';
 require_once BASE_PATH . 'views/inventory/components/navbar.php';
 require_once BASE_PATH . 'views/inventory/components/aside.php';
 ?>
-<section class="md:flex gap-5 px-5">
-    <div class="py-12 px-12 mx-auto flex-1 bg-white dark:bg-gray-800 mt-5 rounded shadow">
+<section class="p-5">
+    <div class="py-12 px-12 mx-auto max-w-3xl bg-white dark:bg-gray-800 mt-5 rounded shadow">
         <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">ثبت ورود کالای جدید</h2>
         <form action="#">
             <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                 <div class="sm:col-span-2 relative">
                     <label for="partNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white after:content-['*'] after:mr-0.5 after:text-red-500">کد فنی کالا</label>
-                    <input type="text" onkeyup="searchForPart(this.value)" name="partNumber" id="partNumber" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder=" کد فنی قطعه را وارد نمایید..." required="">
-                    <div id="part_result" class="hidden absolute w-full bg-white dark:bg-gray-600 p-5 border-gray-300 dark:border-white rounded mt-2 shadow-md"></div>
+                    <input type="text" onkeyup="convertToEnglish(this);searchForPart(this.value)" name="partNumber" id="partNumber" class="bg-gray-50 border uppercase border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder=" کد فنی قطعه را وارد نمایید..." required="">
+                    <div id="part_result" class="hidden z-10 absolute w-full bg-white dark:bg-gray-600 p-5 border-gray-300 dark:border-white rounded mt-2 shadow-md"></div>
                 </div>
-                <div class="w-full">
-                    <label for="partNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white after:content-['*'] after:mr-0.5 after:text-red-500">اصالت کالا</label>
-                    <input type="text" onkeyup="searchForPart(this.value)" name="partNumber" id="partNumber" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder=" اصالت کالای مد نظر را مشخص کنید." required="">
-                    <div id="part_result" class="hidden absolute w-full bg-white dark:bg-gray-600 p-5 border-gray-300 dark:border-white rounded mt-2 shadow-md"></div>
+                <div class="w-full relative">
+                    <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white after:content-['*'] after:mr-0.5 after:text-red-500">اصالت کالا</label>
+                    <input type="text" onkeyup="searchForBrand(this.value)" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder=" اصالت کالای مد نظر را مشخص کنید." required="">
+                    <div id="brand_result" class="hidden absolute w-full bg-white dark:bg-gray-600 p-5 border-gray-300 dark:border-white rounded mt-2 shadow-md"></div>
                 </div>
                 <div class="w-full">
                     <label for="seller" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white after:content-['*'] after:mr-0.5 after:text-red-500">فروشنده</label>
@@ -97,11 +97,11 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                 </div>
                 <div class="w-full">
                     <label for="billNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">شماره فاکتور</label>
-                    <input type="number" name="billNumber" id="billNumber" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="12" required="">
+                    <input type="number" name="billNumber" id="billNumber" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="شماره فاکتور کالا را مشخص کنید... ">
                 </div>
                 <div class="w-full">
                     <label for="billDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">تاریخ فاکتور خرید</label>
-                    <input type="text" name="billDate" id="billDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="12" required="">
+                    <input type="text" name="billDate" id="billDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="تاریخ فاکتور را مشخص کنید...">
                 </div>
                 <div class="sm:col-span-2">
                     <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">توضیحات</label>
@@ -113,55 +113,13 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
             </button>
         </form>
     </div>
-    <div class="py-12 px-12 mx-auto flex-1 bg-white dark:bg-gray-800 mt-5 rounded shadow">
-        <div class="px-4 sm:px-0">
-            <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">پیش نمایش ثبت ورود</h3>
-        </div>
-        <div class="mt-6 border-t border-gray-100 grid grid-cols-1 md:grid-cols-2 space-x-">
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <span class="text-sm font-medium leading-6 text-gray-900 dark:text-white">کد فنی کالا</span>
-                <span class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-200 sm:col-span-2 sm:mt-0">Margot Foster</span>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <span class="text-sm font-medium leading-6 text-gray-900 dark:text-white">اصالت کالا</span>
-                <span class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-200 sm:col-span-2 sm:mt-0">Backend Developer</span>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <span class="text-sm font-medium leading-6 text-gray-900 dark:text-white">فروشنده</span>
-                <span class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-200 sm:col-span-2 sm:mt-0">margotfoster@example.com</span>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <span class="text-sm font-medium leading-6 text-gray-900 dark:text-white">تحویل دهنده</span>
-                <span class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-200 sm:col-span-2 sm:mt-0">$120,000</span>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <span class="text-sm font-medium leading-6 text-gray-900 dark:text-white">تعداد کالا</span>
-                <span class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-200 sm:col-span-2 sm:mt-0">$120,000</span>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <span class="text-sm font-medium leading-6 text-gray-900 dark:text-white">راهرو</span>
-                <span class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-200 sm:col-span-2 sm:mt-0">$120,000</span>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <span class="text-sm font-medium leading-6 text-gray-900 dark:text-white">قفسه</span>
-                <span class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-200 sm:col-span-2 sm:mt-0">$120,000</span>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <span class="text-sm font-medium leading-6 text-gray-900 dark:text-white">شماره فاکتور</span>
-                <span class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-200 sm:col-span-2 sm:mt-0">$120,000</span>
-            </div>
-            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <span class="text-sm font-medium leading-6 text-gray-900 dark:text-white">تاریخ فاکتور</span>
-                <span class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-200 sm:col-span-2 sm:mt-0">$120,000</span>
-            </div>
-        </div>
-    </div>
-
 </section>
 <script>
-    const url = "<?= site_url('parts/search') ?>";
     const part_result = document.getElementById("part_result");
     const partNumber = document.getElementById("partNumber");
+
+    const brand_result = document.getElementById("brand_result");
+    const brand = document.getElementById("brand");
 
     const good_info = {
         part_id: null,
@@ -197,6 +155,7 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
 
     function searchForPart(pattern) {
         if (pattern.length > 6) {
+            const url = "<?= site_url('parts/search') ?>";
             pattern = pattern.replace(/\s/g, "");
             pattern = pattern.replace(/-/g, "");
             pattern = pattern.replace(/_/g, "");
@@ -240,6 +199,55 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
                 });
         } else {
             part_result.innerHTML = "";
+        }
+    }
+
+    function searchForBrand(pattern) {
+        const url = "<?= site_url('brands/search') ?>";
+        if (pattern.length > 1) {
+            pattern = pattern.replace(/\s/g, "");
+            pattern = pattern.replace(/-/g, "");
+            pattern = pattern.replace(/_/g, "");
+
+            brand_result.style.display = 'block';
+
+            brand_result.innerHTML = `<div class="flex justify-center items-center">
+            <svg class="animate-spin stroke-gray-800 dark:stroke-white inline-block mx-auto" width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.99988V5.99988M12 20.9999V17.9999M4.20577 16.4999L6.80385 14.9999M21 11.9999H18M16.5 19.7941L15 17.196M3 11.9999H6M7.5 4.20565L9 6.80373M7.5 19.7941L9 17.196M19.7942 16.4999L17.1962 14.9999M4.20577 7.49988L6.80385 8.99988"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            </div>`;
+            let params = new URLSearchParams();
+            params.append("pattern", pattern);
+
+            axios
+                .post(url, params)
+                .then(function(response) {
+                    const data = response.data;
+                    brand_result.innerHTML = '';
+                    for (const item of data) {
+                        brand_result.innerHTML += `
+                        <div class="flex items-center justify-between bg-gray-100 dark:bg-white/10 cursor-pointer rounded p-2 m-2"
+                            onclick="selectPart(${item.id},'${item.name}')">
+                            <span class="text-sm text-gray-800 dark:text-white">${item.name}</span>
+                            <span>
+                                <svg class="stroke-gray-800 dark:stroke-white" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.976 21C4.05476 21 3 19.9452 3 15.024" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M21 15.024C21 19.9452 19.9452 21 15.024 21" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M15.024 3C19.9452 3 21 4.05476 21 8.976" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M3 8.976C3 4.05476 4.05476 3 8.976 3" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 9.5L12 14.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.5 12L9.5 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </div>
+                        `;
+                    }
+                })
+                .catch(function(error) {
+                    console.log(error.message);
+                });
+        } else {
+            brand_result.innerHTML = "";
         }
     }
 

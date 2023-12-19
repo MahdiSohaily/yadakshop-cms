@@ -592,6 +592,10 @@ video {
   z-index: 20;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .m-2 {
   margin: 0.5rem;
 }
@@ -845,6 +849,10 @@ video {
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .flex-1 {
@@ -1930,6 +1938,10 @@ video {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:max-w-3xl {
+    max-width: 48rem;
   }
 
   .md\:flex-grow {
