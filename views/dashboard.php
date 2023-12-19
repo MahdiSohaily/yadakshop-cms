@@ -16,7 +16,7 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
 
 <!-- ------------------------------------------------ Dashboard card section ---------------------------------------------------- -->
 
-<section class="mx-auto mt-14 p-5">
+<section class="mx-auto p-5">
     <h1 class="text-2xl text-gray-800 dark:text-white">داشبورد</h1>
     <div class="grid grid-cols-1 gap-5 mt-6 sm:grid-cols-2 lg:grid-cols-4">
         <div class="p-4 transition-shadow bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-lg">
