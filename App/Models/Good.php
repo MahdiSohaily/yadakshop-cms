@@ -4,7 +4,7 @@ namespace App\Models;
 
 use App\Models\Contracts\mysqlBaseModel;
 
-class Goods extends mysqlBaseModel
+class Good extends mysqlBaseModel
 {
     protected $table = 'nisha';
 }

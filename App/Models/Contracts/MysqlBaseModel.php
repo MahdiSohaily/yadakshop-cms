@@ -64,7 +64,7 @@ class MysqlBaseModel extends BaseModel
      */
     public function get(array $columns, array $where): array
     {
-        return $this->connection->get($this->table, $columns, $where);
+        return $this->connection->select($this->table, $columns, $where) ?? [];
     }
 
     /**
