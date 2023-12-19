@@ -14,7 +14,7 @@
     </div>
     <div class="w-full">
         <div class="flex flex-col items-center w-full mt-3 border-t border-gray-700">
-            <a class="flex items-center w-full h-12 px-3 py-3 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
+            <a class="flex items-center w-full h-14 px-3 py-4 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
                 <svg class="w-6 h-6 fill-gray-800 dark:fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="dashboard" class="icon glyph">
                     <rect x="2" y="2" width="9" height="11" rx="2"></rect>
                     <rect x="13" y="2" width="9" height="7" rx="2"></rect>
@@ -23,14 +23,14 @@
                 </svg>
                 <span class="ml-2 text-sm px-2">صفحه اصلی</span>
             </a>
-            <a class="flex items-center w-full h-12 px-3 py-3 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
+            <a class="flex items-center w-full h-14 px-3 py-4 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
                 <svg class="w-6 h-6 fill-gray-800 dark:fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.0002 1.98828C6.03023 1.98828 1.99023 6.02828 1.99023 10.9983C1.99023 15.9683 6.03023 20.0083 11.0002 20.0083C15.9702 20.0083 20.0102 15.9683 20.0102 10.9983C20.0102 6.02828 15.9702 1.98828 11.0002 1.98828ZM11.0002 13.2483H8.00023C7.59023 13.2483 7.25023 12.9083 7.25023 12.4983C7.25023 12.0883 7.59023 11.7483 8.00023 11.7483H11.0002C11.4102 11.7483 11.7502 12.0883 11.7502 12.4983C11.7502 12.9083 11.4102 13.2483 11.0002 13.2483ZM14.0002 10.2483H8.00023C7.59023 10.2483 7.25023 9.90828 7.25023 9.49828C7.25023 9.08828 7.59023 8.74828 8.00023 8.74828H14.0002C14.4102 8.74828 14.7502 9.08828 14.7502 9.49828C14.7502 9.90828 14.4102 10.2483 14.0002 10.2483Z"" />
                     <path d=" M21.9901 18.95C21.6601 18.34 20.9601 18 20.0201 18C19.3101 18 18.7001 18.29 18.3401 18.79C17.9801 19.29 17.9001 19.96 18.1201 20.63C18.5501 21.93 19.3001 22.22 19.7101 22.27C19.7701 22.28 19.8301 22.28 19.9001 22.28C20.3401 22.28 21.0201 22.09 21.6801 21.1C22.2101 20.33 22.3101 19.56 21.9901 18.95Z"" />
                 </svg>
                 <span class="ml-2 text-sm px-2">جستجوی اجناس</span>
             </a>
-            <a class="flex items-center w-full h-12 px-3 py-3 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
+            <a class="flex items-center w-full h-14 px-3 py-4 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
                 <svg class="w-6 h-6 fill-gray-800 dark:fill-white" version="1.2" baseProfile="tiny" id="inventory" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 219.3" xml:space="preserve">
                     <path d="M118.8,209.6h-59v-59h22.7v18.8h13.5v-18.8h22.7V209.6z M195.9,209.6h-59v-59h22.7v18.8h13.5v-18.8h22.7V209.6z
                             M157.8,132.5h-59v-59h22.7v18.8h13.5V73.5h22.7V132.5z M246.6,78.9l-16.1-7.5v139.9h-18.2V62.6l-84.5-39.9L43.5,62.6v148.5H25.3
@@ -39,7 +39,7 @@
                 <span class="ml-2 text-sm px-2">انبار گردانی</span>
             </a>
             <div class="dropdown_container w-full">
-                <a class="flex items-center justify-between w-full h-12 px-3 py-3 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
+                <a class="flex items-center justify-between w-full h-14 px-3 py-4 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
                     <div class="flex items-center">
                         <svg class="w-6 h-6 stroke-current fill-gray-800 dark:fill-white" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 47.05 47.049" xml:space="preserve">
                             <g>
@@ -78,7 +78,7 @@
                         <svg class="w-4 h-4 me-2.5 fill-gray-800 dark:fill-white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
                             <g>
                                 <g>
-                                    <path d="M405.333,85.333h-128v-64C277.333,9.536,267.776,0,256,0s-21.333,9.536-21.333,21.333v64h-128
+                                    <path d="M405.333,85.333h-148v-64C277.333,9.536,267.776,0,256,0s-21.333,9.536-21.333,21.333v64h-148
                                             c-11.776,0-21.333,9.536-21.333,21.333v384c0,11.797,9.557,21.333,21.333,21.333h298.667c11.776,0,21.333-9.536,21.333-21.333
                                             v-384C426.667,94.869,417.109,85.333,405.333,85.333z M256,298.667c35.285,0,64,28.715,64,64s-28.715,64-64,64h-42.667
                                             c-11.776,0-21.333-9.536-21.333-21.333c0-11.797,9.557-21.333,21.333-21.333H256c11.755,0,21.333-9.557,21.333-21.333
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="dropdown_container w-full">
-                <a class="flex items-center justify-between w-full h-12 px-3 py-3 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
+                <a class="flex items-center justify-between w-full h-14 px-3 py-4 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
                     <div class="flex items-center">
                         <svg class="w-6 h-6 fill-gray-800 dark:fill-white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 472.615 472.615" xml:space="preserve">
                             <g>
@@ -184,7 +184,7 @@
             </div>
         </div>
         <div class="flex flex-col items-center w-full border-t border-gray-700">
-            <a class="relative flex items-center w-full h-12 px-3 py-3 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
+            <a class="relative flex items-center w-full h-14 px-3 py-4 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white" href="#">
                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
                 </svg>
@@ -193,8 +193,8 @@
             </a>
         </div>
     </div>
-    <form class="flex items-center justify-center w-full h-12 mt-auto" action="<?= site_url('logout') ?>" method="post">
-        <button type="submit" class="flex items-center justify-center w-full h-12 mt-auto bg-gray-600 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white">
+    <form class="flex items-center justify-center w-full h-14 mt-auto" action="<?= site_url('logout') ?>" method="post">
+        <button type="submit" class="flex items-center justify-center w-full h-14 mt-auto bg-gray-600 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white">
             <img src="<?= asset_url('icons/logout.svg') ?>" alt="">
             <span class="ml-2 text-sm px-2"> خروج از حساب</span>
         </button>

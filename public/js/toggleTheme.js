@@ -6,8 +6,10 @@ if (
     window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
   document.documentElement.classList.add("dark");
+  theme.src = "/public/icons/sun.svg";
 } else {
   document.documentElement.classList.remove("dark");
+  theme.src = "/public/icons/moon.svg";
 }
 
 // Function to toggle between light and dark modes

@@ -269,7 +269,7 @@
             </a>
         </li>
     </ul>
-    <ul class="flex gap-3">
+    <ul class="hidden md:flex flex-row gap-3">
         <li class="flex items-center">
             <img id="logo" class="cursor-pointer" onclick="toggleTheme()" src="<?= asset_url("icons/sun.svg") ?>" alt="bell icon">
         </li>
