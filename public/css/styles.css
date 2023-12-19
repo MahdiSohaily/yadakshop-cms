@@ -31,6 +31,10 @@
     src: url("../fonts/Sahel-Black.woff") format("woff");
 }
 
+.datepicker-container {
+    background-color: red !important;
+}
+
 /* Width and height of the scrollbar track */
 ::-webkit-scrollbar {
     width: 8px;
