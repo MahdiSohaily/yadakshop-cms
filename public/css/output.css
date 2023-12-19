@@ -584,6 +584,22 @@ video {
   top: 0px;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.-bottom-0 {
+  bottom: -0px;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.top-full {
+  top: 100%;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -1591,6 +1607,10 @@ video {
 .active\:bg-red-600:active {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:block {
+  display: block;
 }
 
 :is([dir="rtl"] .rtl\:space-x-reverse) > :not([hidden]) ~ :not([hidden]) {

@@ -193,10 +193,4 @@
             </a>
         </div>
     </div>
-    <form class="flex items-center justify-center w-full h-14 mt-auto" action="<?= site_url('logout') ?>" method="post">
-        <button type="submit" class="flex items-center justify-center w-full h-14 mt-auto bg-gray-600 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-white">
-            <img src="<?= asset_url('icons/logout.svg') ?>" alt="">
-            <span class="ml-2 text-sm px-2"> خروج از حساب</span>
-        </button>
-    </form>
 </aside>

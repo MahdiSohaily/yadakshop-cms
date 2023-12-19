@@ -13,7 +13,7 @@
             </svg>
         </li>
         <li class="group flex items-center">
-            <a class="text-gray-800 dark:text-white font-medium flex items-center py-4 hover:text-gray-500 rounded p-2 ml-2 <?= $page_title == 'ورود کالا' ? 'bg-gray-700 ' : '' ?>" href="">
+            <a class="text-gray-800 dark:text-white flex items-center py-4 hover:text-gray-500 rounded p-2 ml-2 <?= $page_title == 'ورود کالا' ? 'bg-gray-700 ' : '' ?>" href="">
                 <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 32 32" xml:space="preserve">
                     <path class="fill-gray-800 dark:fill-white" d="M27.857,27.864C27.935,29.572,26.571,31,24.861,31H7.139c-1.71,0-3.075-1.428-2.997-3.136L4.957,9.955
                                                 C4.981,9.42,5.421,9,5.956,9h20.089c0.535,0,0.975,0.42,0.999,0.955L27.857,27.864z M16.185,1.003C12.787,0.901,10,3.625,10,7v1h2V7
@@ -23,7 +23,7 @@
             </a>
         </li>
         <li class="group flex items-center">
-            <a class="text-gray-800 dark:text-white font-medium flex items-center py-4 hover:text-gray-500 rounded p-2 ml-2 <?= $page_title == 'خروج کالا' ? 'bg-gray-700 ' : '' ?>" href="">
+            <a class="text-gray-800 dark:text-white flex items-center py-4 hover:text-gray-500 rounded p-2 ml-2 <?= $page_title == 'خروج کالا' ? 'bg-gray-700 ' : '' ?>" href="">
                 <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 32 32" xml:space="preserve">
                     <path class="fill-gray-800 dark:fill-white" d="M27.882,23L26.312,9.649C26.134,8.139,24.854,7,23.332,7H22v2h0.5C22.776,9,23,9.224,23,9.5
                         S22.776,10,22.5,10h-11C11.224,10,11,9.776,11,9.5S11.224,9,11.5,9H12V7h-1.332C9.146,7,7.866,8.139,7.688,9.649L6.118,23H27.882z
@@ -43,7 +43,7 @@
             </a>
         </li>
         <li class="flex items-center relative tooltip_container">
-            <a class="text-gray-800 dark:text-white font-medium flex items-center py-4 hover:text-gray-500 rounded p-3 ml-2 <?= $page_title == 'گزارش ورود' ? 'bg-gray-700 ' : '' ?>" href="">
+            <a class="text-gray-800 dark:text-white flex items-center py-4 hover:text-gray-500 rounded p-3 ml-2 <?= $page_title == 'گزارش ورود' ? 'bg-gray-700 ' : '' ?>" href="">
                 <svg class="fill-gray-800 dark:fill-white" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 296.999 296.999" xml:space="preserve">
                     <g>
                         <g>
@@ -142,7 +142,7 @@
             </div>
         </li>
         <li class="flex items-center relative tooltip_container">
-            <a class="text-gray-800 dark:text-white font-medium flex items-center py-4 hover:text-gray-500 rounded p-3 ml-2 <?= $page_title == 'گزارش ورود' ? 'bg-gray-700 ' : '' ?>" href="">
+            <a class="text-gray-800 dark:text-white flex items-center py-4 hover:text-gray-500 rounded p-3 ml-2 <?= $page_title == 'گزارش ورود' ? 'bg-gray-700 ' : '' ?>" href="">
                 <svg class="fill-gray-800 dark:fill-white" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 296.999 296.999" xml:space="preserve">
                     <g>
                         <g>
@@ -241,7 +241,7 @@
             </div>
         </li>
         <li class="flex items-center">
-            <a class="text-gray-800 dark:text-white font-medium flex items-center py-4 hover:text-gray-500 rounded p-2 ml-2 <?= $page_title == 'موجودی کالا' ? 'bg-gray-700 ' : '' ?>" href="">
+            <a class="text-gray-800 dark:text-white flex items-center py-4 hover:text-gray-500 rounded p-2 ml-2 <?= $page_title == 'موجودی کالا' ? 'bg-gray-700 ' : '' ?>" href="">
                 <svg class="fill-gray-800 dark:fill-white" width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="store" class="icon glyph">
                     <path d="M20,14.81V20a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V14.81A4.25,4.25,0,0,0,5.25,15a4.3,4.3,0,0,0,2.25-.64,4.28,4.28,0,0,0,4.5,0,4.28,4.28,0,0,0,4.5,0,4.3,4.3,0,0,0,2.25.64A4.25,4.25,0,0,0,20,14.81ZM21.76,9,20.17,3.45A2,2,0,0,0,18.25,2H5.75A2,2,0,0,0,3.83,3.45L2.24,9A6.48,6.48,0,0,0,2,10.75a3.25,3.25,0,0,0,5.5,2.34,3.24,3.24,0,0,0,4.5,0,3.24,3.24,0,0,0,4.5,0A3.25,3.25,0,0,0,22,10.75,6.48,6.48,0,0,0,21.76,9Z"></path>
                 </svg>
@@ -249,7 +249,7 @@
             </a>
         </li>
         <li class="flex items-center">
-            <a class="text-gray-800 dark:text-white font-medium flex items-center py-4 hover:text-gray-500 rounded p-2 ml-2 <?= $page_title == 'مرکز تماس' ? 'bg-gray-700 ' : '' ?>" href="">
+            <a class="text-gray-800 dark:text-white flex items-center py-4 hover:text-gray-500 rounded p-2 ml-2 <?= $page_title == 'مرکز تماس' ? 'bg-gray-700 ' : '' ?>" href="">
                 <svg class="fill-gray-800 dark:fill-white" height="20px" width="20px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
                     <g>
                         <path d="M256,47.18C127.063,47.18,0,97.628,0,155.555c0,49.742,0,54.334,0,54.644c0,13.168,10.67,23.838,23.838,23.838
@@ -289,8 +289,39 @@
                 </svg>
             </a>
         </li>
-        <li class="flex items-center">
+        <li class="flex items-center relative tooltip_container group">
             <img class="w-8 h-8 rounded-full py-4ll" title="username" src="<?= asset_url('img/default.jpg') ?>" alt="">
+
+            <div class="left-0 top-full hidden group-hover:block absolute bg-white dark:bg-gray-800 w-52 rounded-b-lg  border dark:border-gray-600 text-gray-800 dark:text-white">
+                <a href="#" class="relative inline-flex items-center w-full px-4 py-3 text-sm font-normal border-b border-gray-100 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-gray-600">
+                    <svg class="h-5 w-5 me-2.5 fill-gray-800 dark:fill-white" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.532 45.532" xml:space="preserve">
+                        <g>
+                            <path d="M22.766,0.001C10.194,0.001,0,10.193,0,22.766s10.193,22.765,22.766,22.765c12.574,0,22.766-10.192,22.766-22.765
+                                    S35.34,0.001,22.766,0.001z M22.766,6.808c4.16,0,7.531,3.372,7.531,7.53c0,4.159-3.371,7.53-7.531,7.53
+                                    c-4.158,0-7.529-3.371-7.529-7.53C15.237,10.18,18.608,6.808,22.766,6.808z M22.761,39.579c-4.149,0-7.949-1.511-10.88-4.012
+                                    c-0.714-0.609-1.126-1.502-1.126-2.439c0-4.217,3.413-7.592,7.631-7.592h8.762c4.219,0,7.619,3.375,7.619,7.592
+                                    c0,0.938-0.41,1.829-1.125,2.438C30.712,38.068,26.911,39.579,22.761,39.579z" />
+                        </g>
+                    </svg>
+                    پروفایل کاربری
+                </a>
+                <form class="relative inline-flex items-center w-full text-sm font-normal border-b border-gray-100 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-gray-600" action="<?= site_url('logout') ?>" method="post">
+                    <button type="submit" class="flex items-center px-4 py-3  w-full">
+                        <svg class="fill-gray-800 dark:fill-white" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                            <g>
+                                <path d="M256,0C114.84,0,0,114.84,0,256s114.84,256,256,256s256-114.84,256-256S397.16,0,256,0z M237.268,95.557
+                                        c0-10.345,8.387-18.732,18.732-18.732s18.732,8.387,18.732,18.732v99.234c0,10.345-8.387,18.732-18.732,18.732
+                                        s-18.732-8.387-18.732-18.732V95.557z M256,399.61c-79.186,0-143.61-64.423-143.61-143.61c0-45.857,22.245-89.352,59.506-116.351
+                                        c8.376-6.072,20.088-4.2,26.159,4.177c6.07,8.377,4.2,20.089-4.177,26.159c-27.567,19.976-44.025,52.13-44.025,86.015
+                                        c0,58.529,47.617,106.146,106.146,106.146S362.146,314.529,362.146,256c0-34.897-17.238-67.604-46.112-87.49
+                                        c-8.52-5.868-10.671-17.532-4.803-26.052c5.867-8.522,17.532-10.671,26.051-4.803C376.31,164.533,399.61,208.775,399.61,256
+                                        C399.61,335.186,335.186,399.61,256,399.61z" />
+                            </g>
+                        </svg>
+                        <span class="ml-2 text-sm px-2"> خروج از حساب</span>
+                    </button>
+                </form>
+            </div>
         </li>
     </ul>
 </header>
