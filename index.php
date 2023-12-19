@@ -1,4 +1,3 @@
-<!-- Front controller -->
 <?php
 
 use App\Core\Routing\Router;

@@ -2,9 +2,10 @@
 
 namespace App\Controllers;
 
+use App\Core\Request;
 use jDateTime;
 
-class GoodsInsertController
+class PartSearchController
 {
     public function index()
     {
@@ -14,7 +15,9 @@ class GoodsInsertController
         ]);
     }
 
-    public function findPartNumber(String $pattern)
+    public function find(Request $request)
     {
+        $pattern = $request->input('pattern');
+        echo ($pattern);
     }
 }

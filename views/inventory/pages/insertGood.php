@@ -3,27 +3,16 @@ require_once BASE_PATH . 'views/templates/heroHeader.php';
 require_once BASE_PATH . 'views/inventory/components/navbar.php';
 require_once BASE_PATH . 'views/inventory/components/aside.php';
 ?>
-<style>
-    /* Example custom styles */
-    #persian-date-picker {
-        background-color: #f0f0f0;
-        color: #333;
-    }
-
-    .datepicker-cell {
-        border: 1px solid #ccc;
-    }
-
-    /* Add more custom styles as needed */
-</style>
 <section class="">
     <div class="py-12 px-12 mx-auto max-w-3xl  bg-white dark:bg-gray-800 mt-5 rounded shadow">
         <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">ثبت ورود کالای جدید</h2>
         <form action="#">
             <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-                <div class="sm:col-span-2">
+                <div class="sm:col-span-2 relative">
                     <label for="partNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white after:content-['*'] after:mr-0.5 after:text-red-500">کد فنی کالا</label>
-                    <input type="text" name="partNumber" id="partNumber" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder=" کد فنی قطعه را وارد نمایید..." required="">
+                    <input type="text" onkeyup="searchForPart(this.value)" name="partNumber" id="partNumber" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder=" کد فنی قطعه را وارد نمایید..." required="">
+                    <div id="part_result" class="absolute w-full bg-white dark:bg-gray-600 p-5 border-gray-300 dark:border-white rounded mt-2 shadow-md"></div>
+
                 </div>
                 <div class="w-full">
                     <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white after:content-['*'] after:mr-0.5 after:text-red-500">اصالت کالا</label>
@@ -132,6 +121,9 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
     </div>
 </section>
 <script>
+    const url = "<?= site_url('parts/search') ?>";
+    const part_result = document.getElementById("part_result");
+
     $(document).ready(function() {
         $("#billDate").pDatepicker({
             altField: '#persian-date-picker-alt',
@@ -147,6 +139,41 @@ require_once BASE_PATH . 'views/inventory/components/aside.php';
             },
         });
     });
+
+    function searchForPart(pattern) {
+        if (pattern.length > 6) {
+            pattern = pattern.replace(/\s/g, "");
+            pattern = pattern.replace(/-/g, "");
+            pattern = pattern.replace(/_/g, "");
+
+            part_result.innerHTML = ` <svg class="animate-spin stroke-gray-800 dark:stroke-white block mx-auto" width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.99988V5.99988M12 20.9999V17.9999M4.20577 16.4999L6.80385 14.9999M21 11.9999H18M16.5 19.7941L15 17.196M3 11.9999H6M7.5 4.20565L9 6.80373M7.5 19.7941L9 17.196M19.7942 16.4999L17.1962 14.9999M4.20577 7.49988L6.80385 8.99988"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`;
+            let params = new URLSearchParams();
+            params.append("pattern", value);
+
+            axios.post("./app/Controllers/SearchController.php", params)
+                .then(function(response) {
+                    part_result.innerHTML = response.data;
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+        } else {
+            part_result.innerHTML = "";
+        }
+
+
+
+        axios
+            .post(url, params)
+            .then(function(response) {
+                console.log(response);
+            })
+            .catch(function(error) {
+                console.log(error.message);
+            });
+    }
 </script>
 <?php
 require_once BASE_PATH . 'views/templates/heroFooter.php'
